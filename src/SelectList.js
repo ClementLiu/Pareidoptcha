@@ -24,7 +24,7 @@ export default function SelectList() {
       </div>
       <button onClick={previouseList}>Previous</button>
       <button disabled={!isAnswered && true} onClick={nextList}>
-        Next
+        Nextt
       </button>
     </div>
   );
