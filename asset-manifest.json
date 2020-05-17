@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/test-deply/static/css/main.02a54faa.chunk.css",
-    "main.js": "/test-deply/static/js/main.34b50189.chunk.js",
-    "main.js.map": "/test-deply/static/js/main.34b50189.chunk.js.map",
+    "main.js": "/test-deply/static/js/main.aa7cd8bc.chunk.js",
+    "main.js.map": "/test-deply/static/js/main.aa7cd8bc.chunk.js.map",
     "runtime-main.js": "/test-deply/static/js/runtime-main.0349c7e8.js",
     "runtime-main.js.map": "/test-deply/static/js/runtime-main.0349c7e8.js.map",
-    "static/js/2.b31e62da.chunk.js": "/test-deply/static/js/2.b31e62da.chunk.js",
-    "static/js/2.b31e62da.chunk.js.map": "/test-deply/static/js/2.b31e62da.chunk.js.map",
+    "static/js/2.a6b75c5b.chunk.js": "/test-deply/static/js/2.a6b75c5b.chunk.js",
+    "static/js/2.a6b75c5b.chunk.js.map": "/test-deply/static/js/2.a6b75c5b.chunk.js.map",
     "index.html": "/test-deply/index.html",
-    "precache-manifest.31ca634aba0e786660ae072cdfbbb191.js": "/test-deply/precache-manifest.31ca634aba0e786660ae072cdfbbb191.js",
+    "precache-manifest.35f48a05eef058e66e99577305fce949.js": "/test-deply/precache-manifest.35f48a05eef058e66e99577305fce949.js",
     "service-worker.js": "/test-deply/service-worker.js",
     "static/css/main.02a54faa.chunk.css.map": "/test-deply/static/css/main.02a54faa.chunk.css.map",
-    "static/js/2.b31e62da.chunk.js.LICENSE.txt": "/test-deply/static/js/2.b31e62da.chunk.js.LICENSE.txt",
+    "static/js/2.a6b75c5b.chunk.js.LICENSE.txt": "/test-deply/static/js/2.a6b75c5b.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/test-deply/static/media/1.e4c5ce6e.jpg",
     "static/media/10.jpg": "/test-deply/static/media/10.4a945716.jpg",
     "static/media/11.jpg": "/test-deply/static/media/11.52d5119b.jpg",
@@ -28,13 +28,15 @@
     "static/media/7.jpg": "/test-deply/static/media/7.90f3b649.jpg",
     "static/media/8.jpg": "/test-deply/static/media/8.e75c857f.jpg",
     "static/media/9.jpg": "/test-deply/static/media/9.a137a7a9.jpg",
+    "static/media/human.gif": "/test-deply/static/media/human.a190ca61.gif",
+    "static/media/robot-dance.gif": "/test-deply/static/media/robot-dance.3e0f361c.gif",
     "static/media/sun2.jpg": "/test-deply/static/media/sun2.b127168e.jpg",
     "static/media/sun3.jpg": "/test-deply/static/media/sun3.312d76b5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.0349c7e8.js",
-    "static/js/2.b31e62da.chunk.js",
+    "static/js/2.a6b75c5b.chunk.js",
     "static/css/main.02a54faa.chunk.css",
-    "static/js/main.34b50189.chunk.js"
+    "static/js/main.aa7cd8bc.chunk.js"
   ]
 }
