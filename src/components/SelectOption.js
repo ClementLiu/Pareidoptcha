@@ -6,7 +6,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 export default memo(function SelectOption({ imgsrc, alt, id, selected }) {
   const { isSelected } = useContext(QueriesContext);
   const checkIcon = (
-    <FontAwesomeIcon className="faIcon" icon={faCheck} color="green" />
+    <FontAwesomeIcon className="faIcon" icon={faCheck} color="white" />
   );
 
   return (
