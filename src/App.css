@@ -42,7 +42,7 @@
   flex-wrap: wrap;
 }
 .SelectOption {
-  width: 30vw;
+  width: 20vw;
   position: relative;
   transition: transform 0.5s ease-in-out;
 }

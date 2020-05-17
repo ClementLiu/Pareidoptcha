@@ -3,7 +3,7 @@ import { QueriesContext } from "./contexts/Queries.context";
 
 export default function ResultPage() {
   const { imgLists, backToTest } = useContext(QueriesContext);
-  let checkPoints = ["0-1", "0-4", "0-7"];
+  let checkPoints = ["0-5", "0-6", "0-9", "0-10"];
   let checkNum = checkPoints.length;
   let isCheckted = false;
   const selectedLable = imgLists.map((imgList, i) => {
