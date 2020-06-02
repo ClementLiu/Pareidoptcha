@@ -18,10 +18,11 @@
 // };
 import { v4 as uuid } from "uuid";
 
-const beforeLabel = [
+const imageLists = [
   {
     title: "吃惊的脸",
     id: "frist-test-imgage",
+    checkPoints: ["0-5", "0-6", "0-9", "0-10"],
     imageParts: [
       {
         alt: "",
@@ -124,7 +125,7 @@ const beforeLabel = [
 ];
 
 // add label
-const afterLabel = beforeLabel.map((qL, a) => {
+const afterLabel = imageLists.map((qL, a) => {
   const newImg = { ...qL, imgId: a };
   const newImgParts = newImg.imageParts.map((q, b) => {
     return { ...q, label: `${a}-${b}` };

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default memo(function SelectOption({ imgsrc, alt, id, selected }) {
-  const { isSelected } = useContext(QueriesContext);
+  const { pageState, imageListsDispatch } = useContext(QueriesContext);
   const checkIcon = (
     <FontAwesomeIcon className="faIcon" icon={faCheck} color="white" />
   );
@@ -14,7 +14,11 @@ export default memo(function SelectOption({ imgsrc, alt, id, selected }) {
       <div
         className="test1"
         onClick={() => {
-          isSelected(id);
+          imageListsDispatch({
+            type: "SELECTED",
+            id: id,
+            currentPageNum: pageState.currentPageNum,
+          });
         }}
       >
         {/* <img src={require("../img/logo512.png")} alt={alt} /> */}

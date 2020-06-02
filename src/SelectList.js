@@ -6,9 +6,11 @@ import { Paper, Button } from "@material-ui/core";
 import { Replay, Headset, ErrorOutline } from "@material-ui/icons";
 // import {ReplayIcon} from "@material-ui/icons/Replay";
 export default function SelectList() {
-  const { imgList, nextList, previouseList } = useContext(QueriesContext);
-  console.log("imgList IN select", imgList);
-  const isAnswered = imgList.imageParts
+  const { pageState, pageDispatch, imageLists } = useContext(QueriesContext);
+  const imageList = imageLists[pageState.currentPageNum];
+  // console.log("imageList IN select", imageList);
+  // console.log("imageList.id", imageList.id);
+  const isAnswered = imageList.imageParts
     .map((q) => q.selected)
     .reduce((a, b) => a + b);
 
@@ -16,10 +18,10 @@ export default function SelectList() {
     <Paper className="selectList">
       <div className="selectList-title">
         <span className="selectList-caption">请选出所有包含以下元素的方格</span>
-        <span className="selectList-head">{imgList.title}</span>
+        <span className="selectList-head">{imageList.title}</span>
       </div>
       <div className="selectList-imageParts">
-        {imgList.imageParts.map((imagePart) => {
+        {imageList.imageParts.map((imagePart) => {
           return (
             <SelectOption {...imagePart} key={imagePart.id}></SelectOption>
           );
@@ -38,7 +40,12 @@ export default function SelectList() {
             variant="contained"
             color="primary"
             disabled={!isAnswered && true}
-            onClick={nextList}
+            onClick={() => {
+              pageDispatch({
+                type: "NEXTPAGE",
+                currentPage: pageState.currentPageNum,
+              });
+            }}
           >
             我不是机器人
           </Button>

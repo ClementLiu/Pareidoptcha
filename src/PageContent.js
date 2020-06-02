@@ -4,6 +4,6 @@ import SelectList from "./SelectList";
 import { QueriesContext } from "./contexts/Queries.context";
 
 export default function PageContent(props) {
-  const { isFinished } = useContext(QueriesContext);
-  return <div>{!isFinished ? <SelectList /> : <ResultPage />}</div>;
+  const { pageState } = useContext(QueriesContext);
+  return <div>{!pageState.isFinished ? <SelectList /> : <ResultPage />}</div>;
 }
