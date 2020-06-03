@@ -1,9 +1,16 @@
 import React, { useContext } from "react";
-import { QueriesContext } from "./contexts/Queries.context";
+import {
+  ImagesContext,
+  PageContext,
+  PageDispatchContext,
+} from "./contexts/Queries.context";
 
 export default function ResultPage() {
-  // const { imgLists, backToTest } = useContext(QueriesContext);
-  const { pageState, pageDispatch, imageLists } = useContext(QueriesContext);
+  // const { imgLists, backToTest } = useContext(ImagesContext);
+  const pageState = useContext(PageContext);
+  const pageDispatch = useContext(PageDispatchContext);
+  const imageLists = useContext(ImagesContext);
+
   // let checkPoints = ["0-5", "0-6", "0-9", "0-10"];
   // let checkNum = checkPoints.length;
   let isCheckted = false;
@@ -13,15 +20,10 @@ export default function ResultPage() {
     if (i === pageState.currentPageNum) {
       const { imageParts } = imgList;
       const selectedLable = imageParts
-        .filter((imagePart) => {
-          if (imagePart.selected === false) {
-            return false;
-          }
-          return true;
-        })
-        .map((imagePart) => {
-          return imagePart.label;
-        });
+        .filter((imagePart) => (imagePart.selected === false ? false : true))
+        .map((imagePart) => imagePart.label);
+      console.log("selectedLable", selectedLable);
+
       if (
         JSON.stringify(selectedLable) === JSON.stringify(imgList.checkPoints)
       ) {
@@ -44,22 +46,23 @@ export default function ResultPage() {
       <p>What a lovely soul here!</p>
       <button
         onClick={() => {
-          pageDispatch({ type: "REST" });
+          pageDispatch({ type: "BACK" });
         }}
       >
         Back
+      </button>
+      <button
+        onClick={() => {
+          pageDispatch({ type: "NEXTPAGE" });
+        }}
+      >
+        Next
       </button>
     </div>
   );
   const bot = (
     <div>
       <h2>Are you a bot?</h2>
-      {/* <img
-        src={
-          "https://media3.giphy.com/media/eJRGS4gLo4nvD4NAzc/200w.webp?cid=ecf05e4754dd1f4e9b1192d7a90f56493c8c15d3f620d330&rid=200w.webp"
-        }
-        alt="bot"
-      ></img> */}
       <img src={require("./robot-dance.gif")} alt="robot"></img>
 
       <p>
@@ -67,29 +70,13 @@ export default function ResultPage() {
       </p>
       <button
         onClick={() => {
-          pageDispatch({ type: "REST" });
+          pageDispatch({ type: "BACK" });
         }}
       >
-        Back
+        Try Again?
       </button>
     </div>
   );
-
-  // const { questionsLists, backToTest } = useContext(QueriesContext);
-  // const results = questionsLists.map((questionsList, i) => {
-  //   const { title, questions } = questionsList;
-  //   const questionsContent = questions.map((question, i) => (
-  //     <div key={i}>
-  //       <p>{`${question.task} is ${question.selected}`}</p>
-  //     </div>
-  //   ));
-  //   return (
-  //     <div key={i}>
-  //       <h4>{title}</h4>
-  //       {questionsContent}
-  //     </div>
-  //   );
-  // });
 
   return <div>{isCheckted ? human : bot}</div>;
 }

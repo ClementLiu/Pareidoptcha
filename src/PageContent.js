@@ -1,9 +1,24 @@
 import React, { useContext } from "react";
 import ResultPage from "./ResultPage";
 import SelectList from "./SelectList";
-import { QueriesContext } from "./contexts/Queries.context";
+import FinishPage from "./FinishPage";
+import { PageContext } from "./contexts/Queries.context";
 
 export default function PageContent(props) {
-  const { pageState } = useContext(QueriesContext);
-  return <div>{!pageState.isFinished ? <SelectList /> : <ResultPage />}</div>;
+  const pageState = useContext(PageContext);
+  console.log("render in pageContents");
+
+  return (
+    <div>
+      {!pageState.isFinished ? (
+        !pageState.isResult ? (
+          <SelectList />
+        ) : (
+          <ResultPage />
+        )
+      ) : (
+        <FinishPage />
+      )}
+    </div>
+  );
 }

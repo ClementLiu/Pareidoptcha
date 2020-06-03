@@ -1,10 +1,16 @@
 import React, { useContext, memo } from "react";
-import { QueriesContext } from "../contexts/Queries.context";
+import {
+  PageContext,
+  ImagesDispatchContext,
+} from "../contexts/Queries.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default memo(function SelectOption({ imgsrc, alt, id, selected }) {
-  const { pageState, imageListsDispatch } = useContext(QueriesContext);
+  const pageState = useContext(PageContext);
+  const imageListsDispatch = useContext(ImagesDispatchContext);
+  /*   console.log("pageState", pageState); */
+
   const checkIcon = (
     <FontAwesomeIcon className="faIcon" icon={faCheck} color="white" />
   );

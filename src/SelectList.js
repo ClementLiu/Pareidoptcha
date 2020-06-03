@@ -1,12 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, memo } from "react";
 import SelectOption from "./components/SelectOption";
-import { QueriesContext } from "./contexts/Queries.context";
+import {
+  ImagesContext,
+  PageContext,
+  PageDispatchContext,
+} from "./contexts/Queries.context";
 
 import { Paper, Button } from "@material-ui/core";
 import { Replay, Headset, ErrorOutline } from "@material-ui/icons";
 // import {ReplayIcon} from "@material-ui/icons/Replay";
-export default function SelectList() {
-  const { pageState, pageDispatch, imageLists } = useContext(QueriesContext);
+export default memo(function SelectList() {
+  const imageLists = useContext(ImagesContext);
+  const pageState = useContext(PageContext);
+  const pageDispatch = useContext(PageDispatchContext);
   const imageList = imageLists[pageState.currentPageNum];
   // console.log("imageList IN select", imageList);
   // console.log("imageList.id", imageList.id);
@@ -42,7 +48,7 @@ export default function SelectList() {
             disabled={!isAnswered && true}
             onClick={() => {
               pageDispatch({
-                type: "NEXTPAGE",
+                type: "SUBMIT",
                 currentPage: pageState.currentPageNum,
               });
             }}
@@ -57,4 +63,4 @@ export default function SelectList() {
       </button> */}
     </Paper>
   );
-}
+});

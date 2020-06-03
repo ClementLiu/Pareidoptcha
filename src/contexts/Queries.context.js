@@ -1,8 +1,10 @@
 import React, { createContext, useReducer } from "react";
 // import getQuestionsLists from "../data/get.questsionsList";
 import getImglists from "../data/get.reCAPTCHA";
-export const QueriesContext = createContext();
+export const ImagesContext = createContext();
+export const ImagesDispatchContext = createContext();
 export const PageContext = createContext();
+export const PageDispatchContext = createContext();
 
 // const startList = 0;
 function pageReducer(state, action) {
@@ -10,28 +12,47 @@ function pageReducer(state, action) {
   switch (action.type) {
     case "NEXTPAGE":
       return state.currentPageNum < state.pageAmt - 1
-        ? { ...state, currentPageNum: state.currentPageNum + 1 }
+        ? {
+            ...state,
+            currentPageNum: state.currentPageNum + 1,
+            isResult: false,
+          }
         : { ...state, isFinished: true };
     case "PREVIOUSPAGE":
       return state.currentPageNum > 0
         ? { ...state, currentPageNum: state.currentPageNum - 1 }
         : console.log("First Page");
+    case "SUBMIT":
+      return { ...state, isResult: true };
+    case "BACK":
+      return { ...state, isResult: false };
     case "REST":
-      return { ...state, isFinished: false };
+      return { ...state, currentPageNum: 0 };
     default:
       return state;
   }
 }
 
 function imageListsReducer(state, action) {
-  // state === imageLists
+  // todo
+  // !
+  // *
+  // ? where is the source
+  /*   switch (key) {
+    case value:
+      
+      break;
+  
+    default:
+      break;
+  } */
   switch (action.type) {
     case "SELECTED":
       return state.map((imageList, index) => {
-        // console.log("**********");
-
+        // index === action.currentPageNum? {...imageList, selected: }:imageList;
         if (index === action.currentPageNum) {
-          let newImageParts = imageList.imageParts.map((imagePart) =>
+          console.log("**********");
+          const newImageParts = imageList.imageParts.map((imagePart) =>
             imagePart.id === action.id
               ? { ...imagePart, selected: !imagePart.selected }
               : imagePart
@@ -53,62 +74,24 @@ export function QueriesProvider(props) {
     currentPageNum: 0,
     pageAmt: getImglists().length,
     isFinished: false,
+    isResult: false,
   });
+  console.log("pageState", pageState);
+
   const [imageLists, imageListsDispatch] = useReducer(
     imageListsReducer,
     getImglists()
   );
 
-  // const [questionsLists, setQuestionsLists] = useState(getQuestionsLists());
-  // const [imgLists, setImgLists] = useState(getImglists());
-  // const [currentList, setcurrentList] = useState(startList);
-  // const [isFinished, setIsFinished] = useState(false);
-
-  // console.log("questionsLists All", imgLists);
-
-  // // metods
-  // const isSelected = (id) => {
-  //   console.log("id in selelcted ", id);
-  //   const updatedimgLists = imgLists.map((imgList) => {
-  //     if (imgList.imgId === currentList) {
-  //       // console.log("### currentList in current select", currentList);
-  //       const updatedImageParts = imgList.imageParts.map((imgPart) =>
-  //         imgPart.id === id
-  //           ? { ...imgPart, selected: !imgPart.selected }
-  //           : imgPart
-  //       );
-  //       console.log("updatedImageParts", updatedImageParts);
-
-  //       const updatedImgList = {
-  //         ...imgList,
-  //         imageParts: updatedImageParts,
-  //       };
-  //       console.log("updatedImgList", updatedImgList);
-
-  //       return updatedImgList;
-  //     } else {
-  //       return imgList;
-  //     }
-  //   });
-  //   setImgLists(updatedimgLists);
-  // };
-  // const nextList = () =>
-  //   currentList < imgLists.length - 1
-  //     ? setcurrentList(currentList + 1)
-  //     : setIsFinished(true);
-  // const previouseList = () =>
-  //   currentList > 0
-  //     ? setcurrentList(currentList - 1)
-  //     : console.log("first list");
-  // const backToTest = () => setIsFinished(false);
-
-  // const imgList = imgLists[currentList];
-
   return (
-    <QueriesContext.Provider
-      value={{ pageState, pageDispatch, imageLists, imageListsDispatch }}
-    >
-      {props.children}
-    </QueriesContext.Provider>
+    <PageContext.Provider value={pageState}>
+      <PageDispatchContext.Provider value={pageDispatch}>
+        <ImagesContext.Provider value={imageLists}>
+          <ImagesDispatchContext.Provider value={imageListsDispatch}>
+            {props.children}
+          </ImagesDispatchContext.Provider>
+        </ImagesContext.Provider>
+      </PageDispatchContext.Provider>
+    </PageContext.Provider>
   );
 }
