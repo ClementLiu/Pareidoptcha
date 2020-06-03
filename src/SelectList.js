@@ -23,7 +23,7 @@ export default memo(function SelectList() {
   return (
     <Paper className="selectList">
       <div className="selectList-title">
-        <span className="selectList-caption">请选出所有包含以下元素的方格</span>
+        <span className="selectList-caption">Select all squares with</span>
         <span className="selectList-head">{imageList.title}</span>
       </div>
       <div className="selectList-imageParts">
