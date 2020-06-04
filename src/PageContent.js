@@ -9,7 +9,7 @@ export default function PageContent(props) {
   console.log("render in pageContents");
 
   return (
-    <div>
+    <div className="pageContent">
       {!pageState.isFinished ? (
         !pageState.isResult ? (
           <SelectList />
