@@ -1,16 +1,13 @@
 .App {
   text-align: center;
+  font-family: "8BITWONDERNominal";
+  font-weight: normal;
+  font-style: normal;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -38,9 +35,23 @@
 }
 
 /* customerize */
+.pageContent {
+  background-color: black;
+  height: 100vh;
+}
 .selectList {
-  width: 391px;
+  min-width: 391px;
   padding: 8px;
+}
+.selectList-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectList-card {
+  width: 391px;
+  padding: 12px;
+  background-color: white;
 }
 .selectList-title {
   width: auto;
@@ -52,10 +63,9 @@
 .selectList-caption {
   display: block;
 
-  font-family: PingFang SC;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 8px;
   line-height: 22px;
 
   color: #ffffff;
@@ -93,6 +103,8 @@
 }
 .selectList-btn {
   /* right: 0px; */
+  width: 100%;
+  font-family: "8BITWONDERNominal" !important;
 }
 .selectList-iconBtn svg {
   font-size: 28px;
