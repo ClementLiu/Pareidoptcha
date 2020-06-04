@@ -5,10 +5,12 @@ import {
   PageContext,
   PageDispatchContext,
 } from "./contexts/Queries.context";
-
 import { Paper, Button } from "@material-ui/core";
 import { Replay, Headset, ErrorOutline } from "@material-ui/icons";
+import styled from "styled-components";
+
 // import {ReplayIcon} from "@material-ui/icons/Replay";
+
 export default memo(function SelectList() {
   const imageLists = useContext(ImagesContext);
   const pageState = useContext(PageContext);
