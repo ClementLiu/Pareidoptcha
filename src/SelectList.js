@@ -1,5 +1,5 @@
 import React, { useContext, memo } from "react";
-import SelectOption from "components/SelectOption";
+import SelectOption from "components/SelecedOption/";
 import {
   ImagesContext,
   PageContext,
