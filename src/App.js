@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import PageContent from "./PageContent";
+import PageContent from "PageContent";
 
-import { QueriesProvider } from "./contexts/Queries.context";
+import { QueriesProvider } from "contexts/Queries.context";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 // import { purple } from "@material-ui/core/colors";
 

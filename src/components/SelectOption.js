@@ -1,5 +1,5 @@
 import React, { useContext, memo } from "react";
-import { ImagesDispatchContext } from "../contexts/Queries.context";
+import { ImagesDispatchContext } from "contexts/Queries.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { makeStyles } from "@material-ui/core/styles";

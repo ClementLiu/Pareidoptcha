@@ -1,10 +1,10 @@
 import React, { useContext, memo } from "react";
-import SelectOption from "./components/SelectOption";
+import SelectOption from "components/SelectOption";
 import {
   ImagesContext,
   PageContext,
   PageDispatchContext,
-} from "./contexts/Queries.context";
+} from "contexts/Queries.context";
 
 import { Button } from "@material-ui/core";
 import { styled, makeStyles } from "@material-ui/core/styles";
@@ -28,7 +28,7 @@ const TypeButton = styled(Button)({
   display: "block",
   width: "100%",
 });
-const TitleTest = styled("div")({});
+const TitleDiv = styled("div")({});
 
 const useStyle = makeStyles((theme) => ({
   selectList: {
@@ -121,10 +121,10 @@ export default memo(function SelectList() {
     <div className={classes.selectList}>
       <div className={classes.box}>
         <div className={classes.card}>
-          <TitleTest className={classes.title}>
+          <TitleDiv className={classes.title}>
             <span className={classes.caption}>Select all squares with</span>
             <span className={classes.head}>{imageList.title}</span>
-          </TitleTest>
+          </TitleDiv>
           <div className={classes.imageParts}>
             {imageList.imageParts.map((imagePart) => {
               return (

@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 // import getQuestionsLists from "../data/get.questsionsList";
-import getImglists from "../data/get.reCAPTCHA";
+import getImglists from "data/get.reCAPTCHA";
 export const ImagesContext = createContext();
 export const ImagesDispatchContext = createContext();
 export const PageContext = createContext();
@@ -34,10 +34,6 @@ function pageReducer(state, action) {
 }
 
 function imageListsReducer(state, action) {
-  // todo
-  // !
-  // *
-  // ? where is the source
   /*   switch (key) {
     case value:
       

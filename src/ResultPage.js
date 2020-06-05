@@ -3,7 +3,7 @@ import {
   ImagesContext,
   PageContext,
   PageDispatchContext,
-} from "./contexts/Queries.context";
+} from "contexts/Queries.context";
 
 export default function ResultPage() {
   // const { imgLists, backToTest } = useContext(ImagesContext);
@@ -42,7 +42,7 @@ export default function ResultPage() {
     <div>
       <h2>You made it!</h2>
 
-      <img src={require("./human.gif")} alt="robot"></img>
+      <img src={require("human.gif")} alt="robot"></img>
       <p>What a lovely soul here!</p>
       <button
         onClick={() => {
@@ -63,7 +63,7 @@ export default function ResultPage() {
   const bot = (
     <div>
       <h2>Are you a bot?</h2>
-      <img src={require("./robot-dance.gif")} alt="robot"></img>
+      <img src={require("robot-dance.gif")} alt="robot"></img>
 
       <p>
         01110100 01101111 01000010 01101001 01101110 01100001 01110010 01111001

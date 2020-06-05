@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import ResultPage from "./ResultPage";
-import SelectList from "./SelectList";
-import FinishPage from "./FinishPage";
-import { PageContext } from "./contexts/Queries.context";
+import ResultPage from "ResultPage";
+import SelectList from "SelectList";
+import FinishPage from "FinishPage";
+import { PageContext } from "contexts/Queries.context";
 
 export default function PageContent(props) {
   const pageState = useContext(PageContext);
