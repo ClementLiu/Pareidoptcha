@@ -29,10 +29,7 @@ const useStyle = makeStyles((theme) => ({
       height: "18px",
       left: "6px",
       top: "5px",
-      backgroundColor:
-        level === "beginner"
-          ? theme.palette.secondary.main
-          : theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.main,
       borderRadius: "9px",
       zIndex: "2",
     },

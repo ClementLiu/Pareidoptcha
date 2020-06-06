@@ -45,33 +45,28 @@ const useStyle = makeStyles((theme) => ({
     padding: " 12px",
     backgroundColor: " white",
   },
-  title: ({ level }) => {
-    return {
-      width: "auto",
-      textAlign: "left",
-      padding: "24px 32px 24px 32px",
-      backgroundColor:
-        level === "beginner"
-          ? theme.palette.secondary.main
-          : theme.palette.primary.main,
-
-      marginBottom: "8px",
-    };
+  title: {
+    width: "auto",
+    textAlign: "left",
+    padding: "24px 32px 24px 32px",
+    backgroundColor: theme.palette.primary.main,
+    marginBottom: "8px",
   },
   caption: {
     display: " block",
     fontStyle: " normal",
     fontWeight: " 500",
-    fontSize: " 8px",
+    fontSize: " 10px",
     lineHeight: " 22px",
     color: " #ffffff",
-    marginBottom: " 1px",
+    marginBottom: " 8px",
   },
   head: {
     display: " block",
     fontStyle: " normal",
     fontWeight: " 600",
-    fontSize: " 28px",
+    fontSize: " 23px",
+    letterSpacing: "0.1rem",
     lineHeight: " 39px",
     color: " #ffffff",
   },
@@ -143,7 +138,7 @@ export default memo(function SelectList() {
               <TypeButton
                 className={classes.btn}
                 variant="contained"
-                color={level === "beginner" ? "secondary" : "primary"}
+                color="primary"
                 disabled={!isAnswered && true}
                 onClick={() => {
                   pageDispatch({
