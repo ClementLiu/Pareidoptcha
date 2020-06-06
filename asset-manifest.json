@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/test-deply/static/css/main.602b5edc.chunk.css",
-    "main.js": "/test-deply/static/js/main.4d940426.chunk.js",
-    "main.js.map": "/test-deply/static/js/main.4d940426.chunk.js.map",
+    "main.css": "/test-deply/static/css/main.b3aa0ac3.chunk.css",
+    "main.js": "/test-deply/static/js/main.b5c62478.chunk.js",
+    "main.js.map": "/test-deply/static/js/main.b5c62478.chunk.js.map",
     "runtime-main.js": "/test-deply/static/js/runtime-main.0349c7e8.js",
     "runtime-main.js.map": "/test-deply/static/js/runtime-main.0349c7e8.js.map",
-    "static/js/2.693c9335.chunk.js": "/test-deply/static/js/2.693c9335.chunk.js",
-    "static/js/2.693c9335.chunk.js.map": "/test-deply/static/js/2.693c9335.chunk.js.map",
+    "static/js/2.cac6a695.chunk.js": "/test-deply/static/js/2.cac6a695.chunk.js",
+    "static/js/2.cac6a695.chunk.js.map": "/test-deply/static/js/2.cac6a695.chunk.js.map",
     "index.html": "/test-deply/index.html",
-    "precache-manifest.4135114aa38297fa87b0e9cd3613c46a.js": "/test-deply/precache-manifest.4135114aa38297fa87b0e9cd3613c46a.js",
+    "precache-manifest.0eb45fbb5250a70f360a8abff5c25ce9.js": "/test-deply/precache-manifest.0eb45fbb5250a70f360a8abff5c25ce9.js",
     "service-worker.js": "/test-deply/service-worker.js",
-    "static/css/main.602b5edc.chunk.css.map": "/test-deply/static/css/main.602b5edc.chunk.css.map",
-    "static/js/2.693c9335.chunk.js.LICENSE.txt": "/test-deply/static/js/2.693c9335.chunk.js.LICENSE.txt",
+    "static/css/main.b3aa0ac3.chunk.css.map": "/test-deply/static/css/main.b3aa0ac3.chunk.css.map",
+    "static/js/2.cac6a695.chunk.js.LICENSE.txt": "/test-deply/static/js/2.cac6a695.chunk.js.LICENSE.txt",
     "static/media/dogy-head-00.jpg": "/test-deply/static/media/dogy-head-00.697cdf6b.jpg",
     "static/media/dogy-head-01.jpg": "/test-deply/static/media/dogy-head-01.a6816b55.jpg",
     "static/media/dogy-head-02.jpg": "/test-deply/static/media/dogy-head-02.192cae57.jpg",
@@ -28,6 +28,7 @@
     "static/media/dogy-head-13.jpg": "/test-deply/static/media/dogy-head-13.ecf35cac.jpg",
     "static/media/dogy-head-14.jpg": "/test-deply/static/media/dogy-head-14.ec7272e3.jpg",
     "static/media/dogy-head-15.jpg": "/test-deply/static/media/dogy-head-15.781f9364.jpg",
+    "static/media/heart.svg": "/test-deply/static/media/heart.8594b9b6.svg",
     "static/media/hrow-up-guy-00.jpg": "/test-deply/static/media/hrow-up-guy-00.07f0a41f.jpg",
     "static/media/hrow-up-guy-01.jpg": "/test-deply/static/media/hrow-up-guy-01.5a73eff6.jpg",
     "static/media/hrow-up-guy-02.jpg": "/test-deply/static/media/hrow-up-guy-02.e9e745e6.jpg",
@@ -44,7 +45,6 @@
     "static/media/hrow-up-guy-13.jpg": "/test-deply/static/media/hrow-up-guy-13.25747a17.jpg",
     "static/media/hrow-up-guy-14.jpg": "/test-deply/static/media/hrow-up-guy-14.25a40496.jpg",
     "static/media/hrow-up-guy-15.jpg": "/test-deply/static/media/hrow-up-guy-15.b53ddc3a.jpg",
-    "static/media/human.gif": "/test-deply/static/media/human.a190ca61.gif",
     "static/media/lego-00.jpg": "/test-deply/static/media/lego-00.849698f6.jpg",
     "static/media/lego-01.jpg": "/test-deply/static/media/lego-01.b2eec7bb.jpg",
     "static/media/lego-02.jpg": "/test-deply/static/media/lego-02.ce3c5d25.jpg",
@@ -77,7 +77,6 @@
     "static/media/peeking-bear13.jpg": "/test-deply/static/media/peeking-bear13.0e6396a7.jpg",
     "static/media/peeking-bear14.jpg": "/test-deply/static/media/peeking-bear14.02df43da.jpg",
     "static/media/peeking-bear15.jpg": "/test-deply/static/media/peeking-bear15.7421ad3f.jpg",
-    "static/media/robot-dance.gif": "/test-deply/static/media/robot-dance.3e0f361c.gif",
     "static/media/sun2.jpg": "/test-deply/static/media/sun2.b127168e.jpg",
     "static/media/sun3.jpg": "/test-deply/static/media/sun3.312d76b5.jpg",
     "static/media/surprise-0.jpg": "/test-deply/static/media/surprise-0.e4c5ce6e.jpg",
@@ -115,8 +114,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0349c7e8.js",
-    "static/js/2.693c9335.chunk.js",
-    "static/css/main.602b5edc.chunk.css",
-    "static/js/main.4d940426.chunk.js"
+    "static/js/2.cac6a695.chunk.js",
+    "static/css/main.b3aa0ac3.chunk.css",
+    "static/js/main.b5c62478.chunk.js"
   ]
 }

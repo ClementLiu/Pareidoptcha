@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8a0ef706e08feb72f083eea8736d9595",
+    "revision": "a7d0b3794520bea5cd401e7dc60ed982",
     "url": "/test-deply/index.html"
   },
   {
-    "revision": "d204bbff392e749d1120",
-    "url": "/test-deply/static/css/main.602b5edc.chunk.css"
+    "revision": "b54db44523daddd66ef4",
+    "url": "/test-deply/static/css/main.b3aa0ac3.chunk.css"
   },
   {
-    "revision": "9d327369b20f05a7021c",
-    "url": "/test-deply/static/js/2.693c9335.chunk.js"
+    "revision": "38bf5846aa9bbedbad2f",
+    "url": "/test-deply/static/js/2.cac6a695.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/test-deply/static/js/2.693c9335.chunk.js.LICENSE.txt"
+    "url": "/test-deply/static/js/2.cac6a695.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d204bbff392e749d1120",
-    "url": "/test-deply/static/js/main.4d940426.chunk.js"
+    "revision": "b54db44523daddd66ef4",
+    "url": "/test-deply/static/js/main.b5c62478.chunk.js"
   },
   {
     "revision": "587b3746c51cefd0ceea",
@@ -88,6 +88,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/test-deply/static/media/dogy-head-15.781f9364.jpg"
   },
   {
+    "revision": "8594b9b6f4e1797174929e43e4c8a8cc",
+    "url": "/test-deply/static/media/heart.8594b9b6.svg"
+  },
+  {
     "revision": "07f0a41fbb0adfc6c3aaba61686e08ec",
     "url": "/test-deply/static/media/hrow-up-guy-00.07f0a41f.jpg"
   },
@@ -150,10 +154,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b53ddc3a2ed5f235e8b7d21c4ffd7662",
     "url": "/test-deply/static/media/hrow-up-guy-15.b53ddc3a.jpg"
-  },
-  {
-    "revision": "a190ca61adeba46525bd7b441cc9c577",
-    "url": "/test-deply/static/media/human.a190ca61.gif"
   },
   {
     "revision": "849698f6d0f0044fcda0da5c9759e5a9",
@@ -282,10 +282,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7421ad3f0c1d19c1dccc4770b060ed02",
     "url": "/test-deply/static/media/peeking-bear15.7421ad3f.jpg"
-  },
-  {
-    "revision": "3e0f361ca3615d3a626cc15e1800e01f",
-    "url": "/test-deply/static/media/robot-dance.3e0f361c.gif"
   },
   {
     "revision": "b127168e9f1c5a8c7bb2775a878c5bbe",
