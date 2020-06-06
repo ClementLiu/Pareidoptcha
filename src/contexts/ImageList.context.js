@@ -11,7 +11,8 @@ function pageReducer(state, action) {
   // state = {currentPageNum:0, pageAmt:imgLists.length, isFinished:flase}
   switch (action.type) {
     case "NEXTPAGE":
-      return state.currentPageNum < state.pageAmt - 1
+      return state.currentPageNum <
+        state.levelNum.beginnerNum + state.levelNum.hardNum - 1
         ? {
             ...state,
             currentPageNum: state.currentPageNum + 1,
@@ -64,20 +65,30 @@ function imageListsReducer(state, action) {
   }
 }
 
+const testArray = () => {
+  let beginnerNum = 0;
+  let hardNum = 0;
+  getImglists().forEach((element) => {
+    element.level === "beginner" ? beginnerNum++ : hardNum++;
+  });
+  console.log("beginnerNum:", beginnerNum);
+  console.log("hardNum:", hardNum);
+  return { beginnerNum, hardNum };
+};
+
 export function QueriesProvider(props) {
   // reducer
-  const [pageState, pageDispatch] = useReducer(pageReducer, {
-    currentPageNum: 0,
-    pageAmt: getImglists().length,
-    isFinished: false,
-    isResult: false,
-  });
-  console.log("pageState", pageState);
-
   const [imageLists, imageListsDispatch] = useReducer(
     imageListsReducer,
     getImglists()
   );
+  const [pageState, pageDispatch] = useReducer(pageReducer, {
+    currentPageNum: 0,
+    score: 0,
+    isFinished: false,
+    isResult: false,
+    levelNum: testArray(),
+  });
 
   return (
     <PageContext.Provider value={pageState}>

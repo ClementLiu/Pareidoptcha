@@ -3,7 +3,7 @@ import {
   ImagesContext,
   PageContext,
   PageDispatchContext,
-} from "contexts/Queries.context";
+} from "contexts/ImageList.context";
 
 export default function ResultPage() {
   // const { imgLists, backToTest } = useContext(ImagesContext);

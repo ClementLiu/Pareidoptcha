@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import PageContent from "PageContent";
 
-import { QueriesProvider } from "contexts/Queries.context";
+import { QueriesProvider } from "contexts/ImageList.context";
 // import { purple } from "@material-ui/core/colors";
 
 function App() {

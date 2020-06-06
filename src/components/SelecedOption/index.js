@@ -1,5 +1,5 @@
 import React, { useContext, memo } from "react";
-import { ImagesDispatchContext } from "contexts/Queries.context";
+import { ImagesDispatchContext } from "contexts/ImageList.context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,7 +18,7 @@ const useStyle = makeStyles((theme) => ({
       transition: "transform 0.1s ease-in-out",
     },
   },
-  selected: ({ level }) => ({
+  selected: {
     "& img": {
       transform: "scale(0.8, 0.8)",
     },
@@ -33,7 +33,7 @@ const useStyle = makeStyles((theme) => ({
       borderRadius: "9px",
       zIndex: "2",
     },
-  }),
+  },
   faIcon: {
     position: "absolute",
     left: "8px",
@@ -50,11 +50,9 @@ export default memo(function SelectOption({
   id,
   selected,
   currentPageNum,
-  level,
 }) {
   const imageListsDispatch = useContext(ImagesDispatchContext);
-  const classes = useStyle({ level });
-  console.log("level", level);
+  const classes = useStyle();
 
   return (
     <div

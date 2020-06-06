@@ -1,21 +1,15 @@
 import React from "react";
 import ScoreBar from "./ScoreBar";
-import { styled } from "@material-ui/core/styles";
-
-const ScoreBarFoot = styled("div")({
-  marginTop: "35px",
-});
 
 function index(props) {
   return (
-    <ScoreBarFoot>
+    <div>
       <ScoreBar
         questionsNum={props.questionsNum}
         answeredNum={props.answeredNum}
-      >
-        ScoreBar
-      </ScoreBar>
-    </ScoreBarFoot>
+        level={props.level}
+      ></ScoreBar>
+    </div>
   );
 }
 

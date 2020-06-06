@@ -4,7 +4,7 @@ import {
   ImagesContext,
   PageContext,
   PageDispatchContext,
-} from "contexts/Queries.context";
+} from "contexts/ImageList.context";
 
 import { Button } from "@material-ui/core";
 import { styled, makeStyles } from "@material-ui/core/styles";
@@ -103,9 +103,8 @@ export default memo(function SelectList() {
   const pageState = useContext(PageContext);
   const pageDispatch = useContext(PageDispatchContext);
   const imageList = imageLists[pageState.currentPageNum];
-  const level = imageList.level;
   // ! this gonna create many clases;
-  const classes = useStyle({ level });
+  const classes = useStyle();
   // console.log("imageList IN select", imageList);
   // console.log("imageList.id", imageList.id);
   const isAnswered = imageList.imageParts
@@ -127,7 +126,6 @@ export default memo(function SelectList() {
                   {...imagePart}
                   key={imagePart.id}
                   currentPageNum={pageState.currentPageNum}
-                  level={level}
                 ></SelectOption>
               );
             })}
@@ -142,7 +140,7 @@ export default memo(function SelectList() {
                 disabled={!isAnswered && true}
                 onClick={() => {
                   pageDispatch({
-                    type: "SUBMIT",
+                    type: "NEXTPAGE",
                     currentPage: pageState.currentPageNum,
                   });
                 }}
