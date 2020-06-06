@@ -13,7 +13,7 @@ export default function ResultPage() {
 
   // let checkPoints = ["0-5", "0-6", "0-9", "0-10"];
   // let checkNum = checkPoints.length;
-  let isCheckted = false;
+  let answerCheck = false;
   imageLists.forEach((imgList, i) => {
     console.log("pageState.currentPageNum", pageState.currentPageNum);
     console.log("i", i);
@@ -29,15 +29,15 @@ export default function ResultPage() {
       ) {
         console.log("truetruetrue");
 
-        isCheckted = true;
+        answerCheck = true;
       } else {
         console.log("falsefalse");
-        isCheckted = false;
+        answerCheck = false;
       }
     }
   });
 
-  console.log("isCheckted", isCheckted);
+  console.log("answerCheck", answerCheck);
   const human = (
     <div>
       <h2>You made it!</h2>
@@ -78,5 +78,5 @@ export default function ResultPage() {
     </div>
   );
 
-  return <div>{isCheckted ? human : bot}</div>;
+  return <div>{answerCheck ? human : bot}</div>;
 }

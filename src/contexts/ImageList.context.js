@@ -23,6 +23,7 @@ function pageReducer(state, action) {
       return state.currentPageNum > 0
         ? { ...state, currentPageNum: state.currentPageNum - 1 }
         : console.log("First Page");
+    // ! don't need submit right now
     case "SUBMIT":
       return { ...state, isResult: true };
     case "BACK":
