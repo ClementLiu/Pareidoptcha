@@ -3,7 +3,7 @@ import {
   ImagesContext,
   PageContext,
   PageDispatchContext,
-} from "./contexts/Queries.context";
+} from "contexts/ImageList.context";
 
 export default function ResultPage() {
   // const { imgLists, backToTest } = useContext(ImagesContext);
@@ -13,7 +13,7 @@ export default function ResultPage() {
 
   // let checkPoints = ["0-5", "0-6", "0-9", "0-10"];
   // let checkNum = checkPoints.length;
-  let isCheckted = false;
+  let answerCheck = false;
   imageLists.forEach((imgList, i) => {
     console.log("pageState.currentPageNum", pageState.currentPageNum);
     console.log("i", i);
@@ -29,20 +29,20 @@ export default function ResultPage() {
       ) {
         console.log("truetruetrue");
 
-        isCheckted = true;
+        answerCheck = true;
       } else {
         console.log("falsefalse");
-        isCheckted = false;
+        answerCheck = false;
       }
     }
   });
 
-  console.log("isCheckted", isCheckted);
+  console.log("answerCheck", answerCheck);
   const human = (
     <div>
       <h2>You made it!</h2>
 
-      <img src={require("./human.gif")} alt="robot"></img>
+      <img src={require("human.gif")} alt="robot"></img>
       <p>What a lovely soul here!</p>
       <button
         onClick={() => {
@@ -63,7 +63,7 @@ export default function ResultPage() {
   const bot = (
     <div>
       <h2>Are you a bot?</h2>
-      <img src={require("./robot-dance.gif")} alt="robot"></img>
+      <img src={require("robot-dance.gif")} alt="robot"></img>
 
       <p>
         01110100 01101111 01000010 01101001 01101110 01100001 01110010 01111001
@@ -78,5 +78,5 @@ export default function ResultPage() {
     </div>
   );
 
-  return <div>{isCheckted ? human : bot}</div>;
+  return <div>{answerCheck ? human : bot}</div>;
 }

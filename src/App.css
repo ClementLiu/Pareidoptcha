@@ -1,28 +1,12 @@
+@import url("https://fontlibrary.org/face/8bit-wonder");
+body {
+  background-color: #3c3c3c;
+}
 .App {
   text-align: center;
   font-family: "8BITWONDERNominal";
   font-weight: normal;
   font-style: normal;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,11 +19,10 @@
 }
 
 /* customerize */
-.pageContent {
-  background-color: black;
+/* .pageContent {
   height: 100vh;
-}
-.selectList {
+} */
+/* .selectList {
   min-width: 391px;
   padding: 8px;
 }
@@ -101,18 +84,14 @@
   display: flex;
   justify-content: space-between;
 }
-.selectList-btn {
-  /* right: 0px; */
-  width: 100%;
-  font-family: "8BITWONDERNominal" !important;
-}
+
 .selectList-iconBtn svg {
   font-size: 28px;
   margin-right: 8px;
   color: #737373;
 }
-
-.SelectOption {
+ */
+/* .SelectOption {
   width: 96px;
   height: 96px;
   padding: 1px;
@@ -145,3 +124,4 @@
   z-index: 3;
   font-size: 14px;
 }
+ */

@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 // import getQuestionsLists from "../data/get.questsionsList";
-import getImglists from "../data/get.reCAPTCHA";
+import getImglists from "data/get.reCAPTCHA";
 export const ImagesContext = createContext();
 export const ImagesDispatchContext = createContext();
 export const PageContext = createContext();
@@ -11,7 +11,8 @@ function pageReducer(state, action) {
   // state = {currentPageNum:0, pageAmt:imgLists.length, isFinished:flase}
   switch (action.type) {
     case "NEXTPAGE":
-      return state.currentPageNum < state.pageAmt - 1
+      return state.currentPageNum <
+        state.levelNum.beginnerNum + state.levelNum.hardNum - 1
         ? {
             ...state,
             currentPageNum: state.currentPageNum + 1,
@@ -22,6 +23,7 @@ function pageReducer(state, action) {
       return state.currentPageNum > 0
         ? { ...state, currentPageNum: state.currentPageNum - 1 }
         : console.log("First Page");
+    // ! don't need submit right now
     case "SUBMIT":
       return { ...state, isResult: true };
     case "BACK":
@@ -34,10 +36,6 @@ function pageReducer(state, action) {
 }
 
 function imageListsReducer(state, action) {
-  // todo
-  // !
-  // *
-  // ? where is the source
   /*   switch (key) {
     case value:
       
@@ -68,20 +66,30 @@ function imageListsReducer(state, action) {
   }
 }
 
+const testArray = () => {
+  let beginnerNum = 0;
+  let hardNum = 0;
+  getImglists().forEach((element) => {
+    element.level === "beginner" ? beginnerNum++ : hardNum++;
+  });
+  console.log("beginnerNum:", beginnerNum);
+  console.log("hardNum:", hardNum);
+  return { beginnerNum, hardNum };
+};
+
 export function QueriesProvider(props) {
   // reducer
-  const [pageState, pageDispatch] = useReducer(pageReducer, {
-    currentPageNum: 0,
-    pageAmt: getImglists().length,
-    isFinished: false,
-    isResult: false,
-  });
-  console.log("pageState", pageState);
-
   const [imageLists, imageListsDispatch] = useReducer(
     imageListsReducer,
     getImglists()
   );
+  const [pageState, pageDispatch] = useReducer(pageReducer, {
+    currentPageNum: 0,
+    score: 0,
+    isFinished: false,
+    isResult: false,
+    levelNum: testArray(),
+  });
 
   return (
     <PageContext.Provider value={pageState}>
