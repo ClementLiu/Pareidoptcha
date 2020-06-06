@@ -29,50 +29,8 @@ const useStyles = makeStyles({
     left: 0,
     top: 0,
     transition: "width .5s ease-in-out",
-    /*     "&:before": {
-      content: "''",
-      zIndex: -1,
-      position: "absolute",
-      height: "100%",
-      overflow: "hidden",
-      width: props.meter,
-      backgroundColor: props.color,
-      left: 0,
-      top: 0,
-      borderRadius: "70px",
-      transition: "width .5s ease-in-out",
-    }, */
   }),
 });
-/* const ScoreBarContainer = styled("div")((props) => ({
-  display: "flex",
-  justifyContent: "center",
-  marginTop: "35px",
-}));
-const ScoreBarBox = styled("div")((props) => ({
-  backgroundColor: "black",
-  position: "relative",
-  zIndex: -2,
-  width: "100%",
-  maxWidth: "580px",
-  color: "white",
-  fontSize: "1.2rem",
-  padding: "12px",
-  borderRadius: "70px",
-  "&:before": {
-    content: "''",
-    zIndex: -1,
-    position: "absolute",
-    height: "100%",
-    overflow: "hidden",
-    width: props.meter,
-    backgroundColor: props.color,
-    left: 0,
-    top: 0,
-    borderRadius: "70px",
-    transition: "width .5s ease-in-out",
-  },
-})); */
 
 function ScoreBar(props) {
   const theme = useTheme();
