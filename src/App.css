@@ -7,7 +7,7 @@ body {
   text-align: center;
   /* font-family: "8BITWONDERNominal"; */
   font-family: "8-Bit-Madness";
-  /* src: local("8-Bit-Madness"), url(./fonts/8-Bit-Madness.ttf) format("truetype"); */
+  src: local("8-Bit-Madness"), url(./fonts/8-Bit-Madness.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   display: flex;
