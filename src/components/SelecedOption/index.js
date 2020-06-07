@@ -9,8 +9,8 @@ import { makeStyles } from "@material-ui/core/styles";
 // ? we don't need to have individual class style for each image. They can share
 const useStyle = makeStyles((theme) => ({
   selectOption: {
-    width: "96px",
-    height: "96px",
+    width: "68px",
+    height: "68px",
     padding: "1px",
     position: "relative",
     "& img": {
