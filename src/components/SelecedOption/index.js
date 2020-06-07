@@ -25,10 +25,10 @@ const useStyle = makeStyles((theme) => ({
     "&:before": {
       content: '""',
       position: "absolute",
-      width: "18px",
-      height: "18px",
-      left: "6px",
-      top: "5px",
+      width: "16px",
+      height: "16px",
+      top: "3px",
+      left: "4px",
       backgroundColor: theme.palette.primary.main,
       borderRadius: "9px",
       zIndex: "2",
@@ -36,11 +36,11 @@ const useStyle = makeStyles((theme) => ({
   },
   faIcon: {
     position: "absolute",
-    left: "8px",
-    top: "7px",
+    top: "5px",
+    left: "6px",
     margin: "auto",
     zIndex: "3",
-    fontSize: "14px",
+    fontSize: "12px",
   },
 }));
 
