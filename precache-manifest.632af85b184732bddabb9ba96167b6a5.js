@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0583e993ec23cb2d67b9860e77a30e0d",
+    "revision": "00cfe772338e9f96aa96807c9ada9d52",
     "url": "/test-deply/index.html"
   },
   {
-    "revision": "83be5e39cb26902ac3be",
-    "url": "/test-deply/static/css/main.af9f9e35.chunk.css"
+    "revision": "4879b24b3d1c2dfbb4d9",
+    "url": "/test-deply/static/css/main.aebfa7c3.chunk.css"
   },
   {
     "revision": "648cc6f9c44a05fe9378",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/test-deply/static/js/2.b16f84d5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "83be5e39cb26902ac3be",
+    "revision": "4879b24b3d1c2dfbb4d9",
     "url": "/test-deply/static/js/main.6ed8e4be.chunk.js"
   },
   {
     "revision": "587b3746c51cefd0ceea",
     "url": "/test-deply/static/js/runtime-main.0349c7e8.js"
+  },
+  {
+    "revision": "411fc90bd5309b3cb55166c232f89ce8",
+    "url": "/test-deply/static/media/8-Bit-Madness.411fc90b.ttf"
   },
   {
     "revision": "697cdf6b17ca33ebc26ee985b88ff5bc",
