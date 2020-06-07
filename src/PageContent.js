@@ -4,7 +4,11 @@ import ScoreTitle from "components/ScoreTitle";
 import ScoreBar from "components/ScoreBar";
 import FinishPage from "FinishPage";
 import { PageContext } from "contexts/ImageList.context";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  makeStyles,
+} from "@material-ui/core/styles";
 
 const themeBeginner = createMuiTheme({
   palette: {
@@ -28,8 +32,17 @@ const themehard = createMuiTheme({
   },
 });
 
+const useStyles = makeStyles({
+  pageContent: {
+    maxWidth: " 480px",
+    display: "flex",
+    flexDirection: "column",
+  },
+});
+
 export default function PageContent(props) {
   const pageState = useContext(PageContext);
+  const classes = useStyles();
   // const level = useContext(ImagesContext)[pageState.currentPageNum].level;
   const level =
     pageState.currentPageNum < pageState.levelNum.beginnerNum
@@ -40,7 +53,7 @@ export default function PageContent(props) {
       ? pageState.currentPageNum + 1
       : pageState.currentPageNum + 1 - pageState.levelNum.beginnerNum;
   return (
-    <div className="pageContent">
+    <div className={classes.pageContent}>
       {!pageState.isFinished ? (
         <ThemeProvider theme={level === "beginner" ? themeBeginner : themehard}>
           <ScoreTitle />

@@ -22,11 +22,15 @@ import { styled, makeStyles } from "@material-ui/core/styles";
 // ??? how to keep consistency
 // ***** use styled component but how to use theme?
 const TypeButton = styled(Button)({
-  fontFamily: '"8BITWONDERNominal"',
+  fontFamily: '"8-Bit-Madness"',
   borderRadius: 3,
   color: "white",
   display: "block",
-  width: "100%",
+  // width: "100%",
+  borderRadius: "0",
+  textTransform: "none",
+  fontSize: "1.1rem",
+  padding: "2px 16px",
 });
 const TitleDiv = styled("div")({});
 
@@ -41,14 +45,14 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: "center",
   },
   card: {
-    width: " 391px",
-    padding: " 12px",
+    width: " 280px",
+    padding: "8px",
     backgroundColor: " white",
   },
   title: {
     width: "auto",
     textAlign: "left",
-    padding: "24px 32px 24px 32px",
+    padding: "6px 6px 12px 16px",
     backgroundColor: theme.palette.primary.main,
     marginBottom: "8px",
   },
@@ -56,25 +60,25 @@ const useStyle = makeStyles((theme) => ({
     display: " block",
     fontStyle: " normal",
     fontWeight: " 500",
-    fontSize: " 10px",
+    fontSize: " 1rem",
     lineHeight: " 22px",
     color: " #ffffff",
-    marginBottom: " 8px",
   },
   head: {
     display: " block",
     fontStyle: " normal",
     fontWeight: " 600",
-    fontSize: " 23px",
+    fontSize: " 1.9rem",
     letterSpacing: "0.1rem",
     lineHeight: " 39px",
     color: " #ffffff",
+    textTransform: "uppercase",
   },
-  divid: {
+  /*   divid: {
     borderTop: " #e3e3e3 solid 1px",
     height: " 0px",
     marginBottom: " 8px",
-  },
+  }, */
   /* btn: ({ level }) => {
     console.log("btn-props", level);
 
@@ -88,7 +92,8 @@ const useStyle = makeStyles((theme) => ({
   imageParts: {
     display: " flex",
     flexWrap: " wrap",
-    width: " 392px",
+    width: " 100%",
+    // width: " 392px",
     marginBottom: " 8px",
   },
   footer: {},
@@ -131,11 +136,12 @@ export default memo(function SelectList() {
             })}
           </div>
           <div className={classes.footer}>
-            <div className={classes.divid}></div>
+            {/* <div className={classes.divid}></div> */}
             <div className={classes.controls}>
               <TypeButton
                 className={classes.btn}
                 variant="contained"
+                fullWidth
                 color="primary"
                 disabled={!isAnswered && true}
                 onClick={() => {

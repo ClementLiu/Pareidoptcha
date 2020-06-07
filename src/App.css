@@ -10,6 +10,8 @@ body {
   /* src: local("8-Bit-Madness"), url(./fonts/8-Bit-Madness.ttf) format("truetype"); */
   font-weight: normal;
   font-style: normal;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes App-logo-spin {
