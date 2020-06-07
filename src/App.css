@@ -1,10 +1,13 @@
-@import url("https://fontlibrary.org/face/8bit-wonder");
+/* @import url("https://fontlibrary.org/face/8bit-wonder"); */
+@import "/fonts/8-Bit-Madness.ttf";
 body {
   background-color: #3c3c3c;
 }
 .App {
   text-align: center;
-  font-family: "8BITWONDERNominal";
+  /* font-family: "8BITWONDERNominal"; */
+  font-family: "8-Bit-Madness";
+  /* src: local("8-Bit-Madness"), url(./fonts/8-Bit-Madness.ttf) format("truetype"); */
   font-weight: normal;
   font-style: normal;
 }
