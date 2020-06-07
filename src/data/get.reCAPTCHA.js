@@ -20,8 +20,8 @@ import { v4 as uuid } from "uuid";
 
 const imageLists = [
   {
-    title: "Suprise Face",
-    level: "beginner",
+    title: "STUNNED Face",
+    level: "Rookie",
     id: "frist-test-imgage",
     checkPoints: ["5", "6", "9", "10"],
     imageParts: [
@@ -125,7 +125,7 @@ const imageLists = [
   },
   {
     title: "Throw Up Guy",
-    level: "beginner",
+    level: "Rookie",
     id: "second-test-imgage",
     checkPoints: ["5", "6", "9", "10", "13", "14"],
     imageParts: [
@@ -229,7 +229,7 @@ const imageLists = [
   },
   {
     title: "Legoman",
-    level: "beginner",
+    level: "Rookie",
     id: "third-test-imgage",
     checkPoints: ["5", "6", "9", "10"],
     imageParts: [
@@ -333,7 +333,7 @@ const imageLists = [
   },
   {
     title: "Sneaking Bear",
-    level: "hard",
+    level: "Senior",
     id: "forth-test-imgage",
     checkPoints: ["4", "5", "6", "7", "8", "9", "10", "11"],
     imageParts: [
@@ -437,7 +437,7 @@ const imageLists = [
   },
   {
     title: "Dogy Head",
-    level: "hard",
+    level: "Senior",
     id: "fifth-test-imgage",
     checkPoints: [
       "4",
@@ -554,7 +554,7 @@ const imageLists = [
   },
   {
     title: "Yellow Chick",
-    level: "hard",
+    level: "Senior",
     id: "second-test-imgage",
     checkPoints: ["5", "6", "7", "9", "10", "11", "13", "14"],
     imageParts: [

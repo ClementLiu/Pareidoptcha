@@ -4,7 +4,7 @@ const TitleTest = styled("div")((props) => {
   const theme = useTheme();
   return {
     backgroundColor:
-      props.level === "beginner"
+      props.level === "Rookie"
         ? theme.palette.secondary.main
         : theme.palette.primary.main,
   };

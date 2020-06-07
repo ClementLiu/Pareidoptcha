@@ -13,7 +13,7 @@ import {
 const themeBeginner = createMuiTheme({
   palette: {
     primary: {
-      main: "#3373D6",
+      main: "#2950FB",
     },
     secondary: {
       main: "#A35FF9",
@@ -46,23 +46,23 @@ export default function PageContent(props) {
   // const level = useContext(ImagesContext)[pageState.currentPageNum].level;
   const level =
     pageState.currentPageNum < pageState.levelNum.beginnerNum
-      ? "beginner"
-      : "hard";
+      ? "Rookie"
+      : "Senior";
   const currentNumInLevel =
-    level === "beginner"
+    level === "Rookie"
       ? pageState.currentPageNum + 1
       : pageState.currentPageNum + 1 - pageState.levelNum.beginnerNum;
   return (
     <div className={classes.pageContent}>
       {!pageState.isFinished ? (
-        <ThemeProvider theme={level === "beginner" ? themeBeginner : themehard}>
+        <ThemeProvider theme={level === "Rookie" ? themeBeginner : themehard}>
           <ScoreTitle />
           <SelectList />
           <ScoreBar
             answeredNum={currentNumInLevel}
             level={level}
             questionsNum={
-              level === "beginner"
+              level === "Rookie"
                 ? pageState.levelNum.beginnerNum
                 : pageState.levelNum.hardNum
             }

@@ -42,7 +42,7 @@ function ScoreBar(props) {
   return (
     <div className={classes.root}>
       <div className={classes.scoreBarMask}>
-        {props.level} {props.answeredNum} of {props.questionsNum}
+        {props.level} {props.answeredNum} / {props.questionsNum}
         <div className={classes.scoreBarBox}></div>
       </div>
     </div>

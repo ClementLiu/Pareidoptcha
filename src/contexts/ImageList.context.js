@@ -70,7 +70,7 @@ const testArray = () => {
   let beginnerNum = 0;
   let hardNum = 0;
   getImglists().forEach((element) => {
-    element.level === "beginner" ? beginnerNum++ : hardNum++;
+    element.level === "Rookie" ? beginnerNum++ : hardNum++;
   });
   console.log("beginnerNum:", beginnerNum);
   console.log("hardNum:", hardNum);
