@@ -17,11 +17,15 @@ const ScoreHeartConstainer = styled("div")({
 const ScoreHeartNumb = styled("p")({
   fontSize: "1.9rem",
 });
-function ScoreHeart() {
+
+const padToFour = (number) =>
+  number <= 9999 ? `000${number}`.slice(-4) : number;
+
+function ScoreHeart(props) {
   return (
     <ScoreHeartConstainer>
       <img src={require("./assets/score.svg")} alt="sweetHeart" />
-      <ScoreHeartNumb>0000</ScoreHeartNumb>
+      <ScoreHeartNumb>{padToFour(props.score)}</ScoreHeartNumb>
     </ScoreHeartConstainer>
   );
 }

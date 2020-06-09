@@ -17,7 +17,6 @@
 //   ],
 // };
 import { v4 as uuid } from "uuid";
-import compare from "../helper/compare";
 
 const beforeLabel = [
   {
@@ -237,9 +236,6 @@ const newbL = beforeLabel.map((qL, a) => {
 
   return { ...newQL, questions: newQs };
 });
-// return catalog
-// let test = compare(newbL[0], 0, 1);
-// console.log("test", test);
 
 export default function getQuestionsLists() {
   return newbL;

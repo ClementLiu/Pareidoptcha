@@ -22,10 +22,26 @@ function pageReducer(state, action) {
     case "PREVIOUSPAGE":
       return state.currentPageNum > 0
         ? { ...state, currentPageNum: state.currentPageNum - 1 }
-        : console.log("First Page");
+        : state;
     // ! don't need submit right now
-    case "SUBMIT":
-      return { ...state, isResult: true };
+    case "SUBMIT": {
+      if (action.result) {
+        let newCurPage =
+          state.currentPageNum <
+          state.levelNum.beginnerNum + state.levelNum.hardNum - 1
+            ? state.currentPageNum + 1
+            : state.currentPageNum;
+        return {
+          ...state,
+          score: state.score + 100,
+          isResult: true,
+          currentPageNum: newCurPage,
+        };
+      } else {
+        console.log("wrong R");
+        return state;
+      }
+    }
     case "BACK":
       return { ...state, isResult: false };
     case "REST":
@@ -66,14 +82,14 @@ function imageListsReducer(state, action) {
   }
 }
 
-const testArray = () => {
+const getLevelNum = () => {
   let beginnerNum = 0;
   let hardNum = 0;
   getImglists().forEach((element) => {
     element.level === "Rookie" ? beginnerNum++ : hardNum++;
   });
-  console.log("beginnerNum:", beginnerNum);
-  console.log("hardNum:", hardNum);
+  // console.log("beginnerNum:", beginnerNum);
+  // console.log("hardNum:", hardNum);
   return { beginnerNum, hardNum };
 };
 
@@ -88,7 +104,7 @@ export function QueriesProvider(props) {
     score: 0,
     isFinished: false,
     isResult: false,
-    levelNum: testArray(),
+    levelNum: getLevelNum(),
   });
 
   return (

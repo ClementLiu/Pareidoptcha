@@ -5,6 +5,7 @@ import {
   PageContext,
   PageDispatchContext,
 } from "contexts/ImageList.context";
+import checkResult from "helper/checkResult";
 
 import { Button } from "@material-ui/core";
 import { styled, makeStyles } from "@material-ui/core/styles";
@@ -146,8 +147,9 @@ export default memo(function SelectList() {
                 disabled={!isAnswered && true}
                 onClick={() => {
                   pageDispatch({
-                    type: "NEXTPAGE",
-                    currentPage: pageState.currentPageNum,
+                    type: "SUBMIT",
+                    // currentPage: pageState.currentPageNum,
+                    result: checkResult(imageList),
                   });
                 }}
               >

@@ -45,24 +45,23 @@ export default function PageContent(props) {
   const classes = useStyles();
   // const level = useContext(ImagesContext)[pageState.currentPageNum].level;
   const level =
-    pageState.currentPageNum < pageState.levelNum.beginnerNum
-      ? "Rookie"
-      : "Senior";
+    pageState.currentPageNum < pageState.levelNum.beginnerNum ? 1 : 2;
+  const levelName = level === 1 ? "Rookie" : "hard";
   const currentNumInLevel =
-    level === "Rookie"
+    level === 1
       ? pageState.currentPageNum + 1
       : pageState.currentPageNum + 1 - pageState.levelNum.beginnerNum;
   return (
     <div className={classes.pageContent}>
       {!pageState.isFinished ? (
-        <ThemeProvider theme={level === "Rookie" ? themeBeginner : themehard}>
-          <ScoreTitle />
+        <ThemeProvider theme={level === 1 ? themeBeginner : themehard}>
+          <ScoreTitle score={pageState.score} />
           <SelectList />
           <ScoreBar
             answeredNum={currentNumInLevel}
-            level={level}
+            level={levelName}
             questionsNum={
-              level === "Rookie"
+              level === 1
                 ? pageState.levelNum.beginnerNum
                 : pageState.levelNum.hardNum
             }
