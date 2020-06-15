@@ -6,6 +6,7 @@ export const ImagesDispatchContext = createContext();
 export const PageContext = createContext();
 export const PageDispatchContext = createContext();
 
+const imgListsOri = getImglists();
 // const startList = 0;
 function pageReducer(state, action) {
   // state = {currentPageNum:0, pageAmt:imgLists.length, isFinished:flase}
@@ -16,15 +17,26 @@ function pageReducer(state, action) {
         ? {
             ...state,
             currentPageNum: state.currentPageNum + 1,
-            isResult: false,
+            isCheckingResult: false,
           }
         : { ...state, isFinished: true };
     case "PREVIOUSPAGE":
       return state.currentPageNum > 0
         ? { ...state, currentPageNum: state.currentPageNum - 1 }
         : state;
-    // ! don't need submit right now
-    case "SUBMIT": {
+    // todo add after submit animation
+    case "SUBMIT":
+      return action.result
+        ? {
+            ...state,
+            score: state.score + 100,
+            isCheckingResult: true,
+          }
+        : {
+            ...state,
+            isCheckingResult: true,
+          };
+    /*     {
       if (action.result) {
         let newCurPage =
           state.currentPageNum <
@@ -34,16 +46,16 @@ function pageReducer(state, action) {
         return {
           ...state,
           score: state.score + 100,
-          isResult: true,
+          isCheckingResult: true,
           currentPageNum: newCurPage,
         };
       } else {
         console.log("wrong R");
         return state;
       }
-    }
+    } */
     case "BACK":
-      return { ...state, isResult: false };
+      return { ...state, isCheckingResult: false };
     case "REST":
       return { ...state, currentPageNum: 0 };
     default:
@@ -85,7 +97,7 @@ function imageListsReducer(state, action) {
 const getLevelNum = () => {
   let beginnerNum = 0;
   let hardNum = 0;
-  getImglists().forEach((element) => {
+  imgListsOri.forEach((element) => {
     element.level === "Rookie" ? beginnerNum++ : hardNum++;
   });
   // console.log("beginnerNum:", beginnerNum);
@@ -97,13 +109,13 @@ export function QueriesProvider(props) {
   // reducer
   const [imageLists, imageListsDispatch] = useReducer(
     imageListsReducer,
-    getImglists()
+    imgListsOri
   );
   const [pageState, pageDispatch] = useReducer(pageReducer, {
     currentPageNum: 0,
     score: 0,
     isFinished: false,
-    isResult: false,
+    isCheckingResult: false,
     levelNum: getLevelNum(),
   });
 

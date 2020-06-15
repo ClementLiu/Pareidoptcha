@@ -12,7 +12,7 @@ const HeadConntainer = styled("div")({
 const Head = styled("div")({
   display: "flex",
   // maxWidth: "580px",
-  // maxWidth: "296px",
+  maxWidth: "296px",
   justifyContent: "space-between",
   alignItems: "center",
   width: "100%",
@@ -22,8 +22,8 @@ function index(props) {
     <HeadConntainer>
       <Head>
         <Title>
-          HOW HUMAN <br />
-          YOU ARE
+          I AM NOT
+          <br />A ROBOT
         </Title>
         <ScoreHeart score={props.score}></ScoreHeart>
       </Head>

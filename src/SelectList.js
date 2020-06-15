@@ -7,33 +7,17 @@ import {
 } from "contexts/ImageList.context";
 import checkResult from "helper/checkResult";
 
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import { styled, makeStyles } from "@material-ui/core/styles";
 
-// import {ReplayIcon} from "@material-ui/icons/Replay";
-// ! the font url is not stable
-// todo host font on github. the size only 14 kb
-// ! RegExp can help... never mind
-// todo add level
-// todo change other page to useStyle
-// ? play with level hard and beginer
-// ** one solotion: manually change all details with color.
-// ** second create a color var for level.
-// ***** but the theme color also need to be changed and also the selected color
-// ??? how to keep consistency
-// ***** use styled component but how to use theme?
-const TypeButton = styled(Button)({
-  fontFamily: '"8-Bit-Madness"',
-  borderRadius: 3,
-  color: "white",
-  display: "block",
-  // width: "100%",
-  borderRadius: "0",
-  textTransform: "none",
-  fontSize: "1.1rem",
+const ShowAnswerBtn = styled(Button)({
   padding: "2px 16px",
+  width: "100%",
 });
-const TitleDiv = styled("div")({});
+
+const TitleDiv = styled("div")({
+  // color,
+});
 
 const useStyle = makeStyles((theme) => ({
   selectList: {
@@ -75,21 +59,10 @@ const useStyle = makeStyles((theme) => ({
     color: " #ffffff",
     textTransform: "uppercase",
   },
-  /*   divid: {
-    borderTop: " #e3e3e3 solid 1px",
-    height: " 0px",
-    marginBottom: " 8px",
-  }, */
-  /* btn: ({ level }) => {
-    console.log("btn-props", level);
-
-    return {
-      backgroundColor:
-        level === "beginner"
-          ? theme.palette.secondary.main
-          : theme.palette.primary.main,
-    };
-  }, */
+  answerBtn: {
+    color: theme.palette.primary.main,
+  },
+  btnOutline: {},
   imageParts: {
     display: " flex",
     flexWrap: " wrap",
@@ -103,6 +76,7 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: " space-between",
   },
 }));
+const isSubmited = true;
 
 export default memo(function SelectList() {
   const imageLists = useContext(ImagesContext);
@@ -138,24 +112,63 @@ export default memo(function SelectList() {
           </div>
           <div className={classes.footer}>
             {/* <div className={classes.divid}></div> */}
-            <div className={classes.controls}>
-              <TypeButton
-                className={classes.btn}
-                variant="contained"
-                fullWidth
-                color="primary"
-                disabled={!isAnswered && true}
-                onClick={() => {
-                  pageDispatch({
-                    type: "SUBMIT",
-                    // currentPage: pageState.currentPageNum,
-                    result: checkResult(imageList),
-                  });
-                }}
-              >
-                I am not A ROBOT
-              </TypeButton>
-            </div>
+            <Grid container spacing={1} className={classes.controls}>
+              {isSubmited ? (
+                <Grid item xs={12}>
+                  <ShowAnswerBtn
+                    variant="contained"
+                    disableElevation
+                    fullWidth
+                    color="primary"
+                    disabled={!isAnswered && true}
+                    onClick={() => {
+                      pageDispatch({
+                        type: "SUBMIT",
+                        // currentPage: pageState.currentPageNum,
+                        result: checkResult(imageList),
+                      });
+                    }}
+                  >
+                    I am not A ROBOT
+                  </ShowAnswerBtn>
+                </Grid>
+              ) : (
+                <React.Fragment>
+                  <Grid item xs={6}>
+                    <ShowAnswerBtn
+                      variant="outlined"
+                      color="primary"
+                      onClick={() => {
+                        pageDispatch({
+                          type: "SUBMIT",
+                          // currentPage: pageState.currentPageNum,
+                          result: checkResult(imageList),
+                        });
+                      }}
+                    >
+                      Show Answer
+                    </ShowAnswerBtn>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <ShowAnswerBtn
+                      variant="contained"
+                      disableElevation
+                      // fullWidth
+                      color="primary"
+                      onClick={() => {
+                        pageDispatch({
+                          type: "SUBMIT",
+                          // currentPage: pageState.currentPageNum,
+                          result: checkResult(imageList),
+                        });
+                      }}
+                    >
+                      Next
+                    </ShowAnswerBtn>
+                  </Grid>
+                </React.Fragment>
+              )}
+            </Grid>
           </div>
         </div>
       </div>
