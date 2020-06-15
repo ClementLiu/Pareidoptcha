@@ -6,8 +6,9 @@ const Titile = styled("span")((props) => ({
   color: props.color,
   width: "50%",
   textAlign: "left",
-  fontSize: "1.9rem",
-  lineHeight: "150%",
+  fontSize: "2rem",
+  lineHeight: "94%",
+  textTransform: "uppercase",
 }));
 
 function Title(props) {

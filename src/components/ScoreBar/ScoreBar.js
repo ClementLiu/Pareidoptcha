@@ -5,16 +5,17 @@ const useStyles = makeStyles({
   root: {
     display: "flex",
     justifyContent: "center",
-    marginTop: "35px",
+    marginTop: "10px",
   },
   scoreBarMask: {
     zIndex: 1,
     backgroundColor: "black",
     width: "100%",
-    maxWidth: "580px",
+    // width: "100%",
+    maxWidth: "282px",
     color: "white",
     fontSize: "1.2rem",
-    padding: "12px",
+    padding: "6px",
     borderRadius: "70px",
     position: "relative",
     overflow: "hidden",
@@ -41,7 +42,7 @@ function ScoreBar(props) {
   return (
     <div className={classes.root}>
       <div className={classes.scoreBarMask}>
-        {props.level} {props.answeredNum} of {props.questionsNum}
+        {props.level} {props.answeredNum} / {props.questionsNum}
         <div className={classes.scoreBarBox}></div>
       </div>
     </div>

@@ -20,16 +20,17 @@ import { v4 as uuid } from "uuid";
 
 const imageLists = [
   {
-    title: "Suprise Face",
-    level: "beginner",
-    id: "frist-test-imgage",
-    checkPoints: ["5", "6", "9", "10"],
+    title: "STUNNED Face" /* 标题 */,
+    level: "Rookie" /* 困难等级 */,
+    id: uuid(),
+    checkPoints: ["5", "6", "9", "10"] /* 正确答案的九宫格位置 */,
     imageParts: [
+      /* 里面有16张图片 */
       {
-        alt: "surprise-0",
-        imgsrc: "./assets/images/surprise-0.jpg",
+        alt: "surprise-0" /* 16分之一图片的标题 */,
+        imgsrc: "./assets/images/surprise-0.jpg" /* 16分之一图片地址 */,
         id: uuid(),
-        selected: false,
+        selected: false /* 图片是不是被选中 */,
       },
       {
         alt: "surprise-1",
@@ -125,8 +126,8 @@ const imageLists = [
   },
   {
     title: "Throw Up Guy",
-    level: "beginner",
-    id: "second-test-imgage",
+    level: "Rookie",
+    id: uuid(),
     checkPoints: ["5", "6", "9", "10", "13", "14"],
     imageParts: [
       {
@@ -229,8 +230,8 @@ const imageLists = [
   },
   {
     title: "Legoman",
-    level: "beginner",
-    id: "third-test-imgage",
+    level: "Rookie",
+    id: uuid(),
     checkPoints: ["5", "6", "9", "10"],
     imageParts: [
       {
@@ -333,8 +334,8 @@ const imageLists = [
   },
   {
     title: "Sneaking Bear",
-    level: "hard",
-    id: "forth-test-imgage",
+    level: "Senior",
+    id: uuid(),
     checkPoints: ["4", "5", "6", "7", "8", "9", "10", "11"],
     imageParts: [
       {
@@ -437,8 +438,8 @@ const imageLists = [
   },
   {
     title: "Dogy Head",
-    level: "hard",
-    id: "fifth-test-imgage",
+    level: "Senior",
+    id: uuid(),
     checkPoints: [
       "4",
       "5",
@@ -554,8 +555,8 @@ const imageLists = [
   },
   {
     title: "Yellow Chick",
-    level: "hard",
-    id: "second-test-imgage",
+    level: "Master",
+    id: uuid(),
     checkPoints: ["5", "6", "7", "9", "10", "11", "13", "14"],
     imageParts: [
       {

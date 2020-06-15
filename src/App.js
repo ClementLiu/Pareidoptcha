@@ -6,6 +6,8 @@ import { QueriesProvider } from "contexts/ImageList.context";
 // import { purple } from "@material-ui/core/colors";
 
 function App() {
+  console.log("app running");
+
   return (
     <div className="App">
       <QueriesProvider>

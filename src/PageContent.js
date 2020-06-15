@@ -1,55 +1,110 @@
 import React, { useContext } from "react";
-import SelectList from "SelectList";
+import SelectList from "components/SelecList/";
 import ScoreTitle from "components/ScoreTitle";
 import ScoreBar from "components/ScoreBar";
 import FinishPage from "FinishPage";
+import { getLevelData } from "helper/helpers";
 import { PageContext } from "contexts/ImageList.context";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  createMuiTheme,
+  ThemeProvider,
+  makeStyles,
+} from "@material-ui/core/styles";
 
+const overrides = () => {
+  return {
+    MuiButton: {
+      // Name of the rule
+      root: {
+        fontFamily: '"8-Bit-Madness"',
+        borderRadius: 0,
+        textTransform: "none",
+        fontSize: "1.1rem",
+      },
+      // contained: {
+      //   color: "white",
+      // },
+      outlinedPrimary: {
+        // Some CSS
+        border: "0",
+        outline: "2px solid rgba(41, 80, 251, 1)",
+        outlineOffset: "-2px",
+        // borderWidth: "2px",
+        "&:hover": {
+          border: "0",
+          outline: "2px solid rgba(41, 80, 251, 1)",
+          outlineOffset: "-2px",
+          backgroundColor: "rgba(41, 80, 251, 0.1)",
+        },
+      },
+    },
+  };
+};
 const themeBeginner = createMuiTheme({
+  overrides: overrides(),
   palette: {
     primary: {
-      main: "#3373D6",
-    },
-    secondary: {
-      main: "#A35FF9",
+      main: "#2950FB",
     },
   },
 });
 
-const themehard = createMuiTheme({
+const themeHard = createMuiTheme({
+  overrides: overrides(),
   palette: {
     primary: {
       main: "#A35FF9",
     },
-    secondary: {
-      main: "#3373D6",
+  },
+});
+const themeMaster = createMuiTheme({
+  overrides: overrides(),
+  palette: {
+    primary: {
+      main: "#E92985",
     },
+  },
+});
+
+const useStyles = makeStyles({
+  pageContent: {
+    maxWidth: " 480px",
+    display: "flex",
+    flexDirection: "column",
   },
 });
 
 export default function PageContent(props) {
   const pageState = useContext(PageContext);
-  // const level = useContext(ImagesContext)[pageState.currentPageNum].level;
-  const level =
-    pageState.currentPageNum < pageState.levelNum.beginnerNum
-      ? "beginner"
-      : "hard";
-  const currentNumInLevel =
-    level === "beginner"
-      ? pageState.currentPageNum + 1
-      : pageState.currentPageNum + 1 - pageState.levelNum.beginnerNum;
+  const classes = useStyles();
+
+  const levelData = getLevelData(pageState);
+  const getTheme = () => {
+    switch (levelData.level) {
+      case 1:
+        return themeBeginner;
+      case 2:
+        return themeHard;
+      case 3:
+        return themeMaster;
+      default:
+        return themeBeginner;
+    }
+  };
   return (
-    <div className="pageContent">
+    <div className={classes.pageContent}>
       {!pageState.isFinished ? (
-        <ThemeProvider theme={level === "beginner" ? themeBeginner : themehard}>
-          <ScoreTitle />
+        <ThemeProvider
+          // theme={levelData.level === 1 ? themeBeginner : themeHard}
+          theme={getTheme()}
+        >
+          <ScoreTitle {...pageState} />
           <SelectList />
           <ScoreBar
-            answeredNum={currentNumInLevel}
-            level={level}
+            answeredNum={levelData.currentNumInLevel}
+            level={levelData.levelName}
             questionsNum={
-              level === "beginner"
+              levelData.level === 1
                 ? pageState.levelNum.beginnerNum
                 : pageState.levelNum.hardNum
             }
