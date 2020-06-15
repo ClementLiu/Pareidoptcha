@@ -555,7 +555,7 @@ const imageLists = [
   },
   {
     title: "Yellow Chick",
-    level: "Senior",
+    level: "Master",
     id: uuid(),
     checkPoints: ["5", "6", "7", "9", "10", "11", "13", "14"],
     imageParts: [

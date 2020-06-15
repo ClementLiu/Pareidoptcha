@@ -2,6 +2,7 @@ import React, { createContext, useReducer } from "react";
 // import getQuestionsLists from "../data/get.questsionsList";
 import getImglists from "data/get.reCAPTCHA";
 import checkResult from "helper/checkResult";
+import { sumObject } from "helper/helpers";
 
 export const ImagesContext = createContext();
 export const ImagesDispatchContext = createContext();
@@ -14,8 +15,7 @@ function pageReducer(state, action) {
   // state = {currentPageNum:0, pageAmt:imgLists.length, isFinished:flase}
   switch (action.type) {
     case "NEXTPAGE":
-      return state.currentPageNum <
-        state.levelNum.beginnerNum + state.levelNum.hardNum - 1
+      return state.currentPageNum < sumObject(state.levelNum) - 1
         ? {
             ...state,
             currentPageNum: state.currentPageNum + 1,
@@ -113,12 +113,27 @@ function imageListsReducer(state, action) {
 const getLevelNum = () => {
   let beginnerNum = 0;
   let hardNum = 0;
+  let masterNum = 0;
   imgListsOri.forEach((element) => {
-    element.level === "Rookie" ? beginnerNum++ : hardNum++;
+    switch (element.level) {
+      case "Rookie":
+        beginnerNum++;
+        break;
+      case "Senior":
+        hardNum++;
+        break;
+      case "Master":
+        masterNum++;
+        break;
+      default:
+        console.log("element.level", element.level);
+
+        break;
+    }
   });
   // console.log("beginnerNum:", beginnerNum);
   // console.log("hardNum:", hardNum);
-  return { beginnerNum, hardNum };
+  return { beginnerNum, hardNum, masterNum };
 };
 
 export function QueriesProvider(props) {

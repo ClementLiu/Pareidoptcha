@@ -3,6 +3,7 @@ import SelectList from "components/SelecList/";
 import ScoreTitle from "components/ScoreTitle";
 import ScoreBar from "components/ScoreBar";
 import FinishPage from "FinishPage";
+import { getLevelData } from "helper/helpers";
 import { PageContext } from "contexts/ImageList.context";
 import {
   createMuiTheme,
@@ -45,20 +46,22 @@ const themeBeginner = createMuiTheme({
     primary: {
       main: "#2950FB",
     },
-    secondary: {
-      main: "#A35FF9",
-    },
   },
 });
 
-const themehard = createMuiTheme({
+const themeHard = createMuiTheme({
   overrides: overrides(),
   palette: {
     primary: {
       main: "#A35FF9",
     },
-    secondary: {
-      main: "#3373D6",
+  },
+});
+const themeMaster = createMuiTheme({
+  overrides: overrides(),
+  palette: {
+    primary: {
+      main: "#E92985",
     },
   },
 });
@@ -74,25 +77,34 @@ const useStyles = makeStyles({
 export default function PageContent(props) {
   const pageState = useContext(PageContext);
   const classes = useStyles();
-  // const level = useContext(ImagesContext)[pageState.currentPageNum].level;
-  const level =
-    pageState.currentPageNum < pageState.levelNum.beginnerNum ? 1 : 2;
-  const levelName = level === 1 ? "Rookie" : "hard";
-  const currentNumInLevel =
-    level === 1
-      ? pageState.currentPageNum + 1
-      : pageState.currentPageNum + 1 - pageState.levelNum.beginnerNum;
+
+  const levelData = getLevelData(pageState);
+  const getTheme = () => {
+    switch (levelData.level) {
+      case 1:
+        return themeBeginner;
+      case 2:
+        return themeHard;
+      case 3:
+        return themeMaster;
+      default:
+        return themeBeginner;
+    }
+  };
   return (
     <div className={classes.pageContent}>
       {!pageState.isFinished ? (
-        <ThemeProvider theme={level === 1 ? themeBeginner : themehard}>
+        <ThemeProvider
+          // theme={levelData.level === 1 ? themeBeginner : themeHard}
+          theme={getTheme()}
+        >
           <ScoreTitle {...pageState} />
           <SelectList />
           <ScoreBar
-            answeredNum={currentNumInLevel}
-            level={levelName}
+            answeredNum={levelData.currentNumInLevel}
+            level={levelData.levelName}
             questionsNum={
-              level === 1
+              levelData.level === 1
                 ? pageState.levelNum.beginnerNum
                 : pageState.levelNum.hardNum
             }
