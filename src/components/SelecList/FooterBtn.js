@@ -15,9 +15,9 @@ const ShowAnswerBtn = styled(Button)({
 function FooterBtn({
   isSubmited,
   isAnswered,
-  listResult,
   isCorrect,
   currentPageNum,
+  imageList,
 }) {
   const pageDispatch = useContext(PageDispatchContext);
   const imageListsDispatch = useContext(ImagesDispatchContext);
@@ -38,7 +38,7 @@ function FooterBtn({
                 pageDispatch({
                   type: "SUBMIT",
                   // currentPage: pageState.currentPageNum,
-                  result: listResult,
+                  imageList: imageList,
                 });
               }}
             >
@@ -71,8 +71,6 @@ function FooterBtn({
                 onClick={() => {
                   pageDispatch({
                     type: "NEXTPAGE",
-                    // currentPage: pageState.currentPageNum,
-                    result: listResult,
                   });
                 }}
               >
@@ -92,7 +90,6 @@ function FooterBtn({
                   pageDispatch({
                     type: "NEXTPAGE",
                     // currentPage: pageState.currentPageNum,
-                    result: listResult,
                   });
                 }}
               >

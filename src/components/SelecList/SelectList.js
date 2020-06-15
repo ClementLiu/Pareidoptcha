@@ -1,7 +1,6 @@
 import React, { useContext, memo } from "react";
 import SelectOption from "components/SelecedOption/";
 import { ImagesContext, PageContext } from "contexts/ImageList.context";
-import checkResult from "helper/checkResult";
 import TitleDiv from "./TitleDiv";
 import FooterBtn from "./FooterBtn";
 import useStyle from "./style";
@@ -16,8 +15,6 @@ export default memo(function SelectList() {
   const isAnswered = imageList.imageParts
     .map((q) => q.selected)
     .reduce((a, b) => a + b);
-  // ! it check result at every click
-  const listResult = checkResult(imageList);
 
   return (
     <div className={classes.selectList}>
@@ -42,8 +39,8 @@ export default memo(function SelectList() {
           <FooterBtn
             isSubmited={isSubmited}
             isAnswered={isAnswered}
-            listResult={listResult}
             isCorrect={isCorrect}
+            imageList={imageList}
             currentPageNum={currentPageNum}
           />
         </div>

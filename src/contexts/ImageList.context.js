@@ -1,6 +1,8 @@
 import React, { createContext, useReducer } from "react";
 // import getQuestionsLists from "../data/get.questsionsList";
 import getImglists from "data/get.reCAPTCHA";
+import checkResult from "helper/checkResult";
+
 export const ImagesContext = createContext();
 export const ImagesDispatchContext = createContext();
 export const PageContext = createContext();
@@ -28,8 +30,9 @@ function pageReducer(state, action) {
     case "SHOWANSWER":
       return state;
     // todo add after submit animation
+    // todo don't need check every click
     case "SUBMIT":
-      return action.result
+      return checkResult(action.imageList)
         ? {
             ...state,
             score: state.score + 100,
