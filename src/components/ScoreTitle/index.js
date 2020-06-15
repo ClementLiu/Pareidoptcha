@@ -17,7 +17,7 @@ const Head = styled("div")({
   alignItems: "center",
   width: "100%",
 });
-function index(props) {
+function index({ score }) {
   return (
     <HeadConntainer>
       <Head>
@@ -25,7 +25,7 @@ function index(props) {
           I AM NOT
           <br />A ROBOT
         </Title>
-        <ScoreHeart score={props.score}></ScoreHeart>
+        <ScoreHeart score={score}></ScoreHeart>
       </Head>
     </HeadConntainer>
   );

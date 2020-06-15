@@ -86,7 +86,7 @@ export default function PageContent(props) {
     <div className={classes.pageContent}>
       {!pageState.isFinished ? (
         <ThemeProvider theme={level === 1 ? themeBeginner : themehard}>
-          <ScoreTitle score={pageState.score} />
+          <ScoreTitle {...pageState} />
           <SelectList />
           <ScoreBar
             answeredNum={currentNumInLevel}

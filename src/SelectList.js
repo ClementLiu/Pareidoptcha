@@ -9,6 +9,9 @@ import checkResult from "helper/checkResult";
 
 import { Button, Grid } from "@material-ui/core";
 import { styled, makeStyles } from "@material-ui/core/styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCross } from "@fortawesome/free-solid-svg-icons";
 
 const ShowAnswerBtn = styled(Button)({
   padding: "2px 16px",
@@ -34,12 +37,17 @@ const useStyle = makeStyles((theme) => ({
     padding: "8px",
     backgroundColor: " white",
   },
+  resultState: {
+    content: "''",
+    backgroundColor: "red",
+  },
   title: {
     width: "auto",
     textAlign: "left",
     padding: "6px 6px 12px 16px",
     backgroundColor: theme.palette.primary.main,
     marginBottom: "8px",
+    position: "relative",
   },
   caption: {
     display: " block",
@@ -76,7 +84,6 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: " space-between",
   },
 }));
-const isSubmited = true;
 
 export default memo(function SelectList() {
   const imageLists = useContext(ImagesContext);
@@ -87,6 +94,7 @@ export default memo(function SelectList() {
   const classes = useStyle();
   // console.log("imageList IN select", imageList);
   // console.log("imageList.id", imageList.id);
+  const { isSubmited, isCorrect } = pageState;
   const isAnswered = imageList.imageParts
     .map((q) => q.selected)
     .reduce((a, b) => a + b);
@@ -96,6 +104,13 @@ export default memo(function SelectList() {
       <div className={classes.box}>
         <div className={classes.card}>
           <TitleDiv className={classes.title}>
+            <div className={classes.resultState}>
+              <FontAwesomeIcon
+                className={classes.faIcon}
+                icon={faCheck}
+                color="white"
+              />
+            </div>
             <span className={classes.caption}>Select all squares with</span>
             <span className={classes.head}>{imageList.title}</span>
           </TitleDiv>
@@ -113,7 +128,7 @@ export default memo(function SelectList() {
           <div className={classes.footer}>
             {/* <div className={classes.divid}></div> */}
             <Grid container spacing={1} className={classes.controls}>
-              {isSubmited ? (
+              {!isSubmited ? (
                 <Grid item xs={12}>
                   <ShowAnswerBtn
                     variant="contained"
@@ -132,7 +147,7 @@ export default memo(function SelectList() {
                     I am not A ROBOT
                   </ShowAnswerBtn>
                 </Grid>
-              ) : (
+              ) : !isCorrect ? (
                 <React.Fragment>
                   <Grid item xs={6}>
                     <ShowAnswerBtn
@@ -140,7 +155,7 @@ export default memo(function SelectList() {
                       color="primary"
                       onClick={() => {
                         pageDispatch({
-                          type: "SUBMIT",
+                          type: "SHOWANSWER",
                           // currentPage: pageState.currentPageNum,
                           result: checkResult(imageList),
                         });
@@ -157,7 +172,27 @@ export default memo(function SelectList() {
                       color="primary"
                       onClick={() => {
                         pageDispatch({
-                          type: "SUBMIT",
+                          type: "NEXTPAGE",
+                          // currentPage: pageState.currentPageNum,
+                          result: checkResult(imageList),
+                        });
+                      }}
+                    >
+                      Next
+                    </ShowAnswerBtn>
+                  </Grid>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <Grid item xs={12}>
+                    <ShowAnswerBtn
+                      variant="contained"
+                      disableElevation
+                      // fullWidth
+                      color="primary"
+                      onClick={() => {
+                        pageDispatch({
+                          type: "NEXTPAGE",
                           // currentPage: pageState.currentPageNum,
                           result: checkResult(imageList),
                         });

@@ -17,7 +17,8 @@ function pageReducer(state, action) {
         ? {
             ...state,
             currentPageNum: state.currentPageNum + 1,
-            isCheckingResult: false,
+            isSubmited: false,
+            isCorrect: false,
           }
         : { ...state, isFinished: true };
     case "PREVIOUSPAGE":
@@ -30,11 +31,13 @@ function pageReducer(state, action) {
         ? {
             ...state,
             score: state.score + 100,
-            isCheckingResult: true,
+            isCorrect: true,
+            isSubmited: true,
           }
         : {
             ...state,
-            isCheckingResult: true,
+            isCorrect: false,
+            isSubmited: true,
           };
     /*     {
       if (action.result) {
@@ -46,7 +49,7 @@ function pageReducer(state, action) {
         return {
           ...state,
           score: state.score + 100,
-          isCheckingResult: true,
+          isSubmited: true,
           currentPageNum: newCurPage,
         };
       } else {
@@ -55,7 +58,7 @@ function pageReducer(state, action) {
       }
     } */
     case "BACK":
-      return { ...state, isCheckingResult: false };
+      return { ...state, isSubmited: false };
     case "REST":
       return { ...state, currentPageNum: 0 };
     default:
@@ -115,7 +118,8 @@ export function QueriesProvider(props) {
     currentPageNum: 0,
     score: 0,
     isFinished: false,
-    isCheckingResult: false,
+    isSubmited: false,
+    isCorrect: false,
     levelNum: getLevelNum(),
   });
 
