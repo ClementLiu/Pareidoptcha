@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import SelectList from "SelectList";
+import SelectList from "components/SelecList/";
 import ScoreTitle from "components/ScoreTitle";
 import ScoreBar from "components/ScoreBar";
 import FinishPage from "FinishPage";

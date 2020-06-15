@@ -25,6 +25,8 @@ function pageReducer(state, action) {
       return state.currentPageNum > 0
         ? { ...state, currentPageNum: state.currentPageNum - 1 }
         : state;
+    case "SHOWANSWER":
+      return state;
     // todo add after submit animation
     case "SUBMIT":
       return action.result
@@ -67,20 +69,28 @@ function pageReducer(state, action) {
 }
 
 function imageListsReducer(state, action) {
-  /*   switch (key) {
-    case value:
-      
-      break;
-  
-    default:
-      break;
-  } */
   switch (action.type) {
+    case "SHOWRIGHTANSWERIMAGE":
+      return state.map((imageList, index) => {
+        console.log("show answer****");
+        // index === action.currentPageNum? {...imageList, selected: }:imageList;
+        if (index === action.currentPageNum) {
+          const newImageParts = imageList.imageParts.map((imagePart) =>
+            imageList.checkPoints.includes(imagePart.label)
+              ? { ...imagePart, selected: true }
+              : { ...imagePart, selected: false }
+          );
+          console.log("newImageParts", newImageParts);
+
+          return { ...imageList, imageParts: newImageParts };
+        } else {
+          return imageList;
+        }
+      });
     case "SELECTED":
       return state.map((imageList, index) => {
         // index === action.currentPageNum? {...imageList, selected: }:imageList;
         if (index === action.currentPageNum) {
-          console.log("**********");
           const newImageParts = imageList.imageParts.map((imagePart) =>
             imagePart.id === action.id
               ? { ...imagePart, selected: !imagePart.selected }
