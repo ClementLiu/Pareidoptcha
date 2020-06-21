@@ -11,7 +11,7 @@ import {
   makeStyles,
 } from "@material-ui/core/styles";
 
-const overrides = () => {
+const overrides = (mainColor) => {
   return {
     MuiButton: {
       // Name of the rule
@@ -27,12 +27,12 @@ const overrides = () => {
       outlinedPrimary: {
         // Some CSS
         border: "0",
-        outline: "2px solid rgba(41, 80, 251, 1)",
+        outline: `2px solid ${mainColor}`,
         outlineOffset: "-2px",
         // borderWidth: "2px",
         "&:hover": {
           border: "0",
-          outline: "2px solid rgba(41, 80, 251, 1)",
+          outline: `2px solid ${mainColor}`,
           outlineOffset: "-2px",
           backgroundColor: "rgba(41, 80, 251, 0.1)",
         },
@@ -41,7 +41,7 @@ const overrides = () => {
   };
 };
 const themeBeginner = createMuiTheme({
-  overrides: overrides(),
+  overrides: overrides("#2950FB"),
   palette: {
     primary: {
       main: "#2950FB",
@@ -50,7 +50,7 @@ const themeBeginner = createMuiTheme({
 });
 
 const themeHard = createMuiTheme({
-  overrides: overrides(),
+  overrides: overrides("#A35FF9"),
   palette: {
     primary: {
       main: "#A35FF9",
@@ -58,7 +58,7 @@ const themeHard = createMuiTheme({
   },
 });
 const themeMaster = createMuiTheme({
-  overrides: overrides(),
+  overrides: overrides("#E92985"),
   palette: {
     primary: {
       main: "#E92985",
@@ -77,7 +77,7 @@ const useStyles = makeStyles({
 export default function PageContent(props) {
   const pageState = useContext(PageContext);
   const classes = useStyles();
-
+  // const socer =pageState.score;
   const levelData = getLevelData(pageState);
   const getTheme = () => {
     switch (levelData.level) {
@@ -111,7 +111,13 @@ export default function PageContent(props) {
           />
         </ThemeProvider>
       ) : (
-        <FinishPage />
+        <FinishPage
+          score={pageState.score}
+          scoreSum={Object.values(pageState.levelNum).reduce(
+            (a, b) => a + b,
+            0
+          )}
+        />
       )}
     </div>
   );
