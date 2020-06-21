@@ -1,10 +1,10 @@
 import React from "react";
+import ScorePage from "components/ScorePage";
 
-export default function FinishPage() {
+export default function FinishPage(props) {
   return (
     <div>
-      <h1>Finished</h1>
-      <p>Mision Completed</p>
+      <ScorePage score={props.score} scoreSum={props.scoreSum}></ScorePage>
     </div>
   );
 }
