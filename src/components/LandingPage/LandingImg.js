@@ -34,7 +34,7 @@ function LandingImg() {
         alt="landingpageimg"
       ></img>
 
-      <Link to="./test-deply/recaptcha" className={classes.btnContainner}>
+      <Link to="./recaptcha" className={classes.btnContainner}>
         <div className={classes.btn}>Press to Start</div>
       </Link>
     </div>
