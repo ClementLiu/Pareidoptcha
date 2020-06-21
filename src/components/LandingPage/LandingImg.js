@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   btnContainner: {
     display: "flex",
     justifyContent: "center",
-    paddingTop: "72px",
+    marginTop: "72px",
   },
   btn: {
     padding: "10px 70px",
