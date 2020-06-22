@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "@material-ui/core/styles";
+import { useCountUp } from "react-countup";
 
 const ScoreHeartConstainer = styled("div")({
   width: "88px",
@@ -22,10 +23,13 @@ const padToFour = (number) =>
   number <= 9999 ? `000${number}`.slice(-4) : number;
 
 function ScoreHeart(props) {
+  const { countUp, update } = useCountUp({ end: 0, duration: 0.4 });
+  update(props.score);
+
   return (
     <ScoreHeartConstainer>
       <img src={require("./assets/score.svg")} alt="sweetHeart" />
-      <ScoreHeartNumb>{padToFour(props.score)}</ScoreHeartNumb>
+      <ScoreHeartNumb>{padToFour(countUp)}</ScoreHeartNumb>
     </ScoreHeartConstainer>
   );
 }

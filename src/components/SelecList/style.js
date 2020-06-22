@@ -21,6 +21,15 @@ const useStyle = makeStyles((theme) => ({
     margin: "auto",
     top: "-24px",
     right: 0,
+    animation: "$resultState-pop 250ms ease-out",
+  },
+  "@keyframes resultState-pop": {
+    "0%": {
+      transform: "translateY(12px)",
+    },
+    "100%": {
+      transform: "translateY(0)",
+    },
   },
   title: {
     width: "auto",
