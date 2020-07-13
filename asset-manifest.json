@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/test-deply/static/css/main.4bc7cd2d.chunk.css",
-    "main.js": "/test-deply/static/js/main.8ed232b9.chunk.js",
-    "main.js.map": "/test-deply/static/js/main.8ed232b9.chunk.js.map",
+    "main.js": "/test-deply/static/js/main.09ff81ea.chunk.js",
+    "main.js.map": "/test-deply/static/js/main.09ff81ea.chunk.js.map",
     "runtime-main.js": "/test-deply/static/js/runtime-main.1b2a49a2.js",
     "runtime-main.js.map": "/test-deply/static/js/runtime-main.1b2a49a2.js.map",
-    "static/js/2.5c9bba6d.chunk.js": "/test-deply/static/js/2.5c9bba6d.chunk.js",
-    "static/js/2.5c9bba6d.chunk.js.map": "/test-deply/static/js/2.5c9bba6d.chunk.js.map",
+    "static/js/2.ae670ea6.chunk.js": "/test-deply/static/js/2.ae670ea6.chunk.js",
+    "static/js/2.ae670ea6.chunk.js.map": "/test-deply/static/js/2.ae670ea6.chunk.js.map",
     "index.html": "/test-deply/index.html",
-    "precache-manifest.1c9d904ab62195f19dd333d276ba2d5b.js": "/test-deply/precache-manifest.1c9d904ab62195f19dd333d276ba2d5b.js",
+    "precache-manifest.7ab2364ae9dbc2b258ea03ee3ca4a376.js": "/test-deply/precache-manifest.7ab2364ae9dbc2b258ea03ee3ca4a376.js",
     "service-worker.js": "/test-deply/service-worker.js",
     "static/css/main.4bc7cd2d.chunk.css.map": "/test-deply/static/css/main.4bc7cd2d.chunk.css.map",
-    "static/js/2.5c9bba6d.chunk.js.LICENSE.txt": "/test-deply/static/js/2.5c9bba6d.chunk.js.LICENSE.txt",
+    "static/js/2.ae670ea6.chunk.js.LICENSE.txt": "/test-deply/static/js/2.ae670ea6.chunk.js.LICENSE.txt",
     "static/media/App.css": "/test-deply/static/media/8-Bit-Madness.411fc90b.ttf",
     "static/media/dogy-head-00.jpg": "/test-deply/static/media/dogy-head-00.697cdf6b.jpg",
     "static/media/dogy-head-01.jpg": "/test-deply/static/media/dogy-head-01.a6816b55.jpg",
@@ -100,6 +100,7 @@
     "static/media/surprise-7.jpg": "/test-deply/static/media/surprise-7.e75c857f.jpg",
     "static/media/surprise-8.jpg": "/test-deply/static/media/surprise-8.a137a7a9.jpg",
     "static/media/surprise-9.jpg": "/test-deply/static/media/surprise-9.4a945716.jpg",
+    "static/media/timerClock.svg": "/test-deply/static/media/timerClock.5794f3de.svg",
     "static/media/yellow-chick-00.jpg": "/test-deply/static/media/yellow-chick-00.a3f116ae.jpg",
     "static/media/yellow-chick-01.jpg": "/test-deply/static/media/yellow-chick-01.5e241b58.jpg",
     "static/media/yellow-chick-02.jpg": "/test-deply/static/media/yellow-chick-02.56946240.jpg",
@@ -119,8 +120,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1b2a49a2.js",
-    "static/js/2.5c9bba6d.chunk.js",
+    "static/js/2.ae670ea6.chunk.js",
     "static/css/main.4bc7cd2d.chunk.css",
-    "static/js/main.8ed232b9.chunk.js"
+    "static/js/main.09ff81ea.chunk.js"
   ]
 }
