@@ -34,11 +34,12 @@ const useStyle = makeStyles((theme) => ({
   title: {
     width: "auto",
     textAlign: "left",
-    padding: "6px 6px 12px 16px",
+    padding: "9px 6px 12px 16px",
     backgroundColor: theme.palette.primary.main,
     marginBottom: "8px",
     position: "relative",
   },
+  countDown: {},
   caption: {
     display: " block",
     fontStyle: " normal",
@@ -56,6 +57,19 @@ const useStyle = makeStyles((theme) => ({
     lineHeight: " 39px",
     color: " #ffffff",
     textTransform: "uppercase",
+  },
+  timeDiv: {
+    position: "absolute",
+    width: "59px",
+    right: "4px",
+    top: "7px",
+    fontSize: "2rem",
+    color: "white",
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  timeTemp: {
+    width: "35px",
   },
   answerBtn: {
     color: theme.palette.primary.main,
