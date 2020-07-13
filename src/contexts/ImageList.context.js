@@ -45,24 +45,6 @@ function pageReducer(state, action) {
             isCorrect: false,
             isSubmited: true,
           };
-    /*     {
-      if (action.result) {
-        let newCurPage =
-          state.currentPageNum <
-          state.levelNum.beginnerNum + state.levelNum.hardNum - 1
-            ? state.currentPageNum + 1
-            : state.currentPageNum;
-        return {
-          ...state,
-          score: state.score + 100,
-          isSubmited: true,
-          currentPageNum: newCurPage,
-        };
-      } else {
-        console.log("wrong R");
-        return state;
-      }
-    } */
     case "BACK":
       return { ...state, isSubmited: false };
     case "REST":
@@ -76,16 +58,12 @@ function imageListsReducer(state, action) {
   switch (action.type) {
     case "SHOWRIGHTANSWERIMAGE":
       return state.map((imageList, index) => {
-        console.log("show answer****");
-        // index === action.currentPageNum? {...imageList, selected: }:imageList;
         if (index === action.currentPageNum) {
           const newImageParts = imageList.imageParts.map((imagePart) =>
             imageList.checkPoints.includes(imagePart.label)
               ? { ...imagePart, selected: true }
               : { ...imagePart, selected: false }
           );
-          console.log("newImageParts", newImageParts);
-
           return { ...imageList, imageParts: newImageParts };
         } else {
           return imageList;
@@ -132,8 +110,6 @@ const getLevelNum = () => {
         break;
     }
   });
-  // console.log("beginnerNum:", beginnerNum);
-  // console.log("hardNum:", hardNum);
   return { beginnerNum, hardNum, masterNum };
 };
 

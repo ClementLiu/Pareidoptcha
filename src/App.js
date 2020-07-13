@@ -8,8 +8,6 @@ import NotFound from "NotFound";
 import { QueriesProvider } from "contexts/ImageList.context";
 
 function App() {
-  console.log("app running");
-
   return (
     <div className="App">
       <QueriesProvider>

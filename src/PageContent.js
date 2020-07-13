@@ -92,7 +92,6 @@ export default function PageContent(props) {
     }
   };
   const questionsNum = () => {
-    console.log("levelData.level", levelData.level);
     switch (levelData.level) {
       case 1:
         return pageState.levelNum.beginnerNum;

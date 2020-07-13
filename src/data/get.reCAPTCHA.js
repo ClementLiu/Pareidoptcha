@@ -667,12 +667,7 @@ const afterLabel = imageLists.map((qL, a) => {
 
   return { ...qL, imageParts: newImgParts };
 });
-// return catalog
-// let test = compare(afterLabel[0], 0, 1);
-// console.log("test", test);
 
 export default function getQuestionsLists() {
-  console.log("run in get reCaptcha");
   return afterLabel;
 }
-// export default  getQuestionsLists = () => questionsLists;
