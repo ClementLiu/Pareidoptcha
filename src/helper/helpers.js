@@ -49,18 +49,15 @@ const getLevelData = (pageState) => {
   }
 
   let currentNumInLevel = 0;
-  switch (true) {
-    case level < pageState.levelNum.beginnerNum:
+  switch (level) {
+    case 1:
       currentNumInLevel = currentPageNumber + 1;
       break;
-    case level < pageState.levelNum.beginnerNum + pageState.levelNum.hardNum:
+    case 2:
       currentNumInLevel =
         currentPageNumber + 1 - pageState.levelNum.beginnerNum;
       break;
-    case level <
-      pageState.levelNum.beginnerNum +
-        pageState.levelNum.hardNum +
-        pageState.levelNum.masterNum:
+    case 3:
       currentNumInLevel =
         currentPageNumber +
         1 -

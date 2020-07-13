@@ -91,6 +91,20 @@ export default function PageContent(props) {
         return themeBeginner;
     }
   };
+  const questionsNum = () => {
+    console.log("levelData.level", levelData.level);
+    switch (levelData.level) {
+      case 1:
+        return pageState.levelNum.beginnerNum;
+
+      case 2:
+        return pageState.levelNum.hardNum;
+      case 3:
+        return pageState.levelNum.masterNum;
+      default:
+        return console.log("levelData.level", levelData.level);
+    }
+  };
   return (
     <div className={classes.pageContent}>
       {!pageState.isFinished ? (
@@ -103,11 +117,7 @@ export default function PageContent(props) {
           <ScoreBar
             answeredNum={levelData.currentNumInLevel}
             level={levelData.levelName}
-            questionsNum={
-              levelData.level === 1
-                ? pageState.levelNum.beginnerNum
-                : pageState.levelNum.hardNum
-            }
+            questionsNum={questionsNum()}
           />
         </ThemeProvider>
       ) : (
