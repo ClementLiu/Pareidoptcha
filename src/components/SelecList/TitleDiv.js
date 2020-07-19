@@ -25,14 +25,16 @@ function TitleDiv({ title, timeTemp, isSubmited, isCorrect }) {
 
       <span className={classes.caption}>Select all squares with</span>
       <span className={classes.head}>{title}</span>
-      <div className={classes.timeDiv}>
-        <img
-          className={classes.timerClock}
-          src={require("./assets/timerClock.svg")}
-          alt="timerClock"
-        />
-        <span className={classes.timeTemp}>{padToTwo(timeTemp)}</span>
-      </div>
+      {!isSubmited ? (
+        <div className={classes.timeDiv}>
+          <img
+            className={classes.timerClock}
+            src={require("./assets/timerClock.svg")}
+            alt="timerClock"
+          />
+          <span className={classes.timeTemp}>{padToTwo(timeTemp)}</span>
+        </div>
+      ) : null}
     </div>
   );
 }

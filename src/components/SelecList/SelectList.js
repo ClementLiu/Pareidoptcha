@@ -23,7 +23,6 @@ export default memo(function SelectList() {
   const isAnswered = imageList.imageParts
     .map((q) => q.selected)
     .reduce((a, b) => a + b);
-  //todo workon timer
   const tragetRefer = useRef();
   useEffect(() => {
     tragetRefer.current.start();
@@ -32,27 +31,29 @@ export default memo(function SelectList() {
     <div className={classes.selectList}>
       <div className={classes.box}>
         <div className={classes.card}>
-          <Countdown
-            className={classes.countDown}
-            date={pageState.timeTest}
-            ref={tragetRefer}
-            onMount={(props) => {
-              setTempt(props.seconds);
-            }}
-            onTick={(props) => {
-              setTempt(props.seconds);
-            }}
-            renderer={({ seconds }) => {
-              return null;
-            }}
-            onComplete={(props) => {
-              setTempt(props.seconds);
-              pageDispatch({
-                type: "SUBMIT",
-                imageList: imageList,
-              });
-            }}
-          />
+          {!isSubmited ? (
+            <Countdown
+              className={classes.countDown}
+              date={pageState.timeTest}
+              ref={tragetRefer}
+              onMount={(props) => {
+                setTempt(props.seconds);
+              }}
+              onTick={(props) => {
+                setTempt(props.seconds);
+              }}
+              renderer={({ seconds }) => {
+                return null;
+              }}
+              onComplete={(props) => {
+                setTempt(props.seconds);
+                pageDispatch({
+                  type: "TIMEUP",
+                  imageList: imageList,
+                });
+              }}
+            />
+          ) : null}
           <TitleDiv
             title={imageList.title}
             isSubmited={isSubmited}

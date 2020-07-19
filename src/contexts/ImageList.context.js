@@ -45,6 +45,23 @@ function pageReducer(state, action) {
             isCorrect: false,
             isSubmited: true,
           };
+    case "TIMEUP":
+      if (state.isSubmited === false) {
+        console.log("timeup working");
+        return checkResult(action.imageList)
+          ? {
+              ...state,
+              score: state.score + 100,
+              isCorrect: true,
+              isSubmited: true,
+            }
+          : {
+              ...state,
+              isCorrect: false,
+              isSubmited: true,
+            };
+      }
+      break;
     case "BACK":
       return { ...state, isSubmited: false };
     case "REST":
