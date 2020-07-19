@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import { PageDispatchContext } from "contexts/ImageList.context";
 
 const useStyles = makeStyles({
   root: {
@@ -25,6 +26,13 @@ const useStyles = makeStyles({
 });
 
 function LandingImg() {
+  const handleClick = () => {
+    pageDispatch({
+      type: "STARTTIMER",
+    });
+  };
+
+  const pageDispatch = useContext(PageDispatchContext);
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -34,7 +42,13 @@ function LandingImg() {
         alt="landingpageimg"
       ></img>
 
-      <Link to="/recaptcha" className={classes.btnContainner}>
+      <Link
+        onClick={handleClick}
+        to={(location) => {
+          return { pathname: "/recaptcha" };
+        }}
+        className={classes.btnContainner}
+      >
         <div className={classes.btn}>Press to Start</div>
       </Link>
     </div>

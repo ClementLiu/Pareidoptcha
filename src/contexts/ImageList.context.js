@@ -62,6 +62,8 @@ function pageReducer(state, action) {
             };
       }
       break;
+    case "STARTTIMER":
+      return { ...state, timeTest: Date.now() + 5000 };
     case "BACK":
       return { ...state, isSubmited: false };
     case "REST":
