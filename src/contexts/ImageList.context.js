@@ -11,6 +11,20 @@ export const PageDispatchContext = createContext();
 
 const imgListsOri = getImglists();
 // const startList = 0;
+
+const addScore = (action) => {
+  console.log("action.imageList.level", action.imageList.level);
+  switch (action.imageList.level) {
+    case "Rookie":
+      return 100;
+    case "Senior":
+      return 200;
+    case "Master":
+      return 300;
+    default:
+      break;
+  }
+};
 function pageReducer(state, action) {
   // state = {currentPageNum:0, pageAmt:imgLists.length, isFinished:flase}
   switch (action.type) {
@@ -36,7 +50,7 @@ function pageReducer(state, action) {
       return checkResult(action.imageList)
         ? {
             ...state,
-            score: state.score + 100,
+            score: state.score + addScore(action),
             isCorrect: true,
             isSubmited: true,
           }
