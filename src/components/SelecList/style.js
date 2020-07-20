@@ -81,6 +81,12 @@ const useStyle = makeStyles((theme) => ({
     width: " 100%",
     // width: " 392px",
     marginBottom: " 8px",
+    position: "relative",
+  },
+  draw: {
+    position: "absolute",
+    width: "100%",
+    zIndex: "5",
   },
   footer: {},
   controls: {

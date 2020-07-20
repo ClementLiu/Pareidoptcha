@@ -8,6 +8,7 @@ import { Grid, Button } from "@material-ui/core";
 import { styled } from "@material-ui/core/styles";
 
 const ShowAnswerBtn = styled(Button)({
+  userSelect: "none",
   padding: "2px 16px",
   width: "100%",
 });
@@ -22,6 +23,36 @@ function FooterBtn({
   const pageDispatch = useContext(PageDispatchContext);
   const imageListsDispatch = useContext(ImagesDispatchContext);
   const classes = useStyle();
+  const showFace = () => {
+    imageListsDispatch({
+      type: "SHOWFACE",
+      currentPageNum: currentPageNum,
+    });
+  };
+  const hideFace = () => {
+    imageListsDispatch({
+      type: "HIDEFACE",
+      currentPageNum: currentPageNum,
+    });
+  };
+  const mouseDown = (e) => {
+    e.preventDefault();
+    showFace();
+  };
+  const touchStart = (e) => {
+    document.body.classList.add("non-select");
+    showFace();
+    e.preventDefault();
+  };
+  const touchEnd = (e) => {
+    document.body.classList.remove("non-select");
+    hideFace();
+    e.preventDefault();
+  };
+  const mouseUp = (e) => {
+    e.preventDefault();
+    hideFace();
+  };
   return (
     <div className={classes.footer}>
       {/* <div className={classes.divid}></div> */}
@@ -51,13 +82,17 @@ function FooterBtn({
               <ShowAnswerBtn
                 variant="outlined"
                 color="primary"
-                onClick={() => {
-                  imageListsDispatch({
-                    type: "SHOWRIGHTANSWERIMAGE",
-                    currentPageNum: currentPageNum,
-                    // result: listResult,
-                  });
-                }}
+                onTouchStart={touchStart}
+                onTouchEnd={touchEnd}
+                onMouseDown={mouseDown}
+                onMouseUp={mouseUp}
+                // onClick={() => {
+                //   // imageListsDispatch({
+                //   //   type: "SHOWRIGHTANSWERIMAGE",
+                //   //   currentPageNum: currentPageNum,
+                //   //   // result: listResult,
+                //   // });
+                // }}
               >
                 Show Answer
               </ShowAnswerBtn>

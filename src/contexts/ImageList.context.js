@@ -21,7 +21,7 @@ function pageReducer(state, action) {
             currentPageNum: state.currentPageNum + 1,
             isSubmited: false,
             isCorrect: false,
-            timeTest: Date.now() + 5000,
+            timeTest: Date.now() + 50000,
           }
         : { ...state, isFinished: true };
     case "PREVIOUSPAGE":
@@ -63,7 +63,7 @@ function pageReducer(state, action) {
       }
       break;
     case "STARTTIMER":
-      return { ...state, timeTest: Date.now() + 5000 };
+      return { ...state, timeTest: Date.now() + 50000 };
     case "BACK":
       return { ...state, isSubmited: false };
     case "REST":
@@ -84,6 +84,27 @@ function imageListsReducer(state, action) {
               : { ...imagePart, selected: false }
           );
           return { ...imageList, imageParts: newImageParts };
+        } else {
+          return imageList;
+        }
+      });
+    case "SHOWFACE":
+      console.log("showFace");
+      return state.map((imageList, index) => {
+        // index === action.currentPageNum? {...imageList, selected: }:imageList;
+        if (index === action.currentPageNum && imageList.showFace === false) {
+          console.log("face in show", imageList.showFace);
+          return { ...imageList, showFace: true };
+        } else {
+          return imageList;
+        }
+      });
+    case "HIDEFACE":
+      console.log("hideFace");
+      return state.map((imageList, index) => {
+        // index === action.currentPageNum? {...imageList, selected: }:imageList;
+        if (index === action.currentPageNum && imageList.showFace === true) {
+          return { ...imageList, showFace: false };
         } else {
           return imageList;
         }
@@ -145,7 +166,7 @@ export function QueriesProvider(props) {
     isSubmited: false,
     isCorrect: false,
     levelNum: getLevelNum(),
-    timeTest: Date.now() + 5000,
+    timeTest: Date.now() + 50000,
   });
 
   return (

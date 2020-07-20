@@ -61,6 +61,13 @@ export default memo(function SelectList() {
             timeTemp={tempt}
           />
           <div className={classes.imageParts}>
+            {imageList.showFace && (
+              <img
+                className={classes.draw}
+                src={require(`${imageList.drawSrc}`)}
+                alt="surprise-Draw"
+              ></img>
+            )}
             {imageList.imageParts.map((imagePart) => {
               return (
                 <SelectOption
