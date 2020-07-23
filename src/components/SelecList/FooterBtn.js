@@ -36,6 +36,7 @@ function FooterBtn({
     });
   };
   const mouseDown = (e) => {
+    document.body.classList.add("non-select");
     e.preventDefault();
     showFace();
   };
@@ -50,6 +51,7 @@ function FooterBtn({
     e.preventDefault();
   };
   const mouseUp = (e) => {
+    document.body.classList.remove("non-select");
     e.preventDefault();
     hideFace();
   };

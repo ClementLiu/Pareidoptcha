@@ -8,6 +8,8 @@ export const ImagesContext = createContext();
 export const ImagesDispatchContext = createContext();
 export const PageContext = createContext();
 export const PageDispatchContext = createContext();
+export const ResultContext = createContext();
+export const ResultDispatchContext = createContext();
 
 const imgListsOri = getImglists();
 // const startList = 0;
@@ -176,19 +178,24 @@ export function QueriesProvider(props) {
   const [pageState, pageDispatch] = useReducer(pageReducer, {
     currentPageNum: 0,
     score: 0,
-    isFinished: false,
+    isFinished: true,
     isSubmited: false,
     isCorrect: false,
     levelNum: getLevelNum(),
     timeTest: Date.now() + 50000,
   });
+  const [resultState, resultDispatch] = useReducer(pageReducer, {});
 
   return (
     <PageContext.Provider value={pageState}>
       <PageDispatchContext.Provider value={pageDispatch}>
         <ImagesContext.Provider value={imageLists}>
           <ImagesDispatchContext.Provider value={imageListsDispatch}>
-            {props.children}
+            <ResultContext.Provider value={resultState}>
+              <ResultDispatchContext.Provider value={resultDispatch}>
+                {props.children}
+              </ResultDispatchContext.Provider>
+            </ResultContext.Provider>
           </ImagesDispatchContext.Provider>
         </ImagesContext.Provider>
       </PageDispatchContext.Provider>

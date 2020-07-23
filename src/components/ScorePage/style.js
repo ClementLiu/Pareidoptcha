@@ -16,13 +16,58 @@ const useStyles = makeStyles({
     fontSize: "3.7rem",
     color: "white",
   },
-
+  levelBadge: (props) => ({
+    backgroundColor: `${props.badgecolor}`,
+    padding: "3px 2px",
+    color: "white",
+    borderRadius: "6px 0px",
+    marginTop: "20px",
+  }),
+  faceDreamer: {
+    color: "white",
+    margin: "33px 0px 0px 0px",
+  },
   awardTitle: {
     fontSize: "2.8rem",
     color: "#F9D75F",
     marginTop: "99px",
   },
-
+  congratulation: {
+    position: "relative",
+    margin: "20px 0px",
+  },
+  congratulationScript: {
+    position: "relative",
+    backgroundColor: "white",
+    maxWidth: "210px",
+    padding: "20px",
+    "&:after": {
+      content: "''",
+      zIndex: "5",
+      position: "absolute",
+      width: "0",
+      height: "0",
+      borderLeft: "15px solid transparent",
+      borderRight: "15px solid transparent",
+      borderTop: "15px solid #fff",
+      bottom: "-15px",
+      right: "70px",
+    },
+  },
+  seperateLine: {
+    display: "block",
+    height: "1px",
+    border: "0",
+    borderTop: "1px solid #ccc",
+    margin: "1em 0",
+    padding: "0",
+  },
+  imgContainer: {
+    marginTop: "50px",
+    display: "flex",
+    justifyContent: "flex-end",
+  },
+  awardAvatar: {},
   averageRoot: {
     position: "relative",
     marginTop: "140px",

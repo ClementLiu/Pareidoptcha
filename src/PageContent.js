@@ -106,28 +106,30 @@ export default function PageContent(props) {
   };
   return (
     <div className={classes.pageContent}>
-      {!pageState.isFinished ? (
-        <ThemeProvider
-          // theme={levelData.level === 1 ? themeBeginner : themeHard}
-          theme={getTheme()}
-        >
-          <ScoreTitle {...pageState} />
-          <SelectList />
-          <ScoreBar
-            answeredNum={levelData.currentNumInLevel}
-            level={levelData.levelName}
-            questionsNum={questionsNum()}
+      <ThemeProvider
+        // theme={levelData.level === 1 ? themeBeginner : themeHard}
+        theme={getTheme()}
+      >
+        {!pageState.isFinished ? (
+          <>
+            <ScoreTitle {...pageState} />
+            <SelectList />
+            <ScoreBar
+              answeredNum={levelData.currentNumInLevel}
+              level={levelData.levelName}
+              questionsNum={questionsNum()}
+            />
+          </>
+        ) : (
+          <FinishPage
+            score={pageState.score}
+            scoreSum={Object.values(pageState.levelNum).reduce(
+              (a, b, i) => b * ((i + 1) * 100) + a,
+              0
+            )}
           />
-        </ThemeProvider>
-      ) : (
-        <FinishPage
-          score={pageState.score}
-          scoreSum={Object.values(pageState.levelNum).reduce(
-            (a, b) => a + b,
-            0
-          )}
-        />
-      )}
+        )}
+      </ThemeProvider>
     </div>
   );
 }

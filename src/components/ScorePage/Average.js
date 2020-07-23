@@ -3,7 +3,7 @@ import useStyles from "./style";
 
 function Average(props) {
   const classes = useStyles({
-    meter: `${(props.score / (props.scoreSum * 100)) * 100}%`,
+    meter: `${(props.score / props.scoreSum) * 100}%`,
     defaultMeter: "70%",
     //   meter: `${(props.answeredNum / props.questionsNum) * 100}%`,
   });
