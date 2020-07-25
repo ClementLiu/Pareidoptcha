@@ -28,6 +28,18 @@ function Congratulation(props) {
         ></img>
       </div>
       <hr className={classes.seperateLine} />
+
+      <div className={classes.techIssue}>
+        <p>
+          You can scan the QR Code and follow this account to get more future
+          update.
+        </p>
+        <img
+          className={classes.qrcode}
+          src={require("./assets/qr.png")}
+          alt="qr_code"
+        ></img>
+      </div>
     </div>
   );
 }

@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   scoreBigroot: {
     display: "flex",
     justifyContent: "space-around",
+    marginTop: "30px",
   },
   score: {
     fontSize: "3.7rem",
@@ -35,6 +36,7 @@ const useStyles = makeStyles({
   congratulation: {
     position: "relative",
     margin: "20px 0px",
+    width: "250px",
   },
   congratulationScript: {
     position: "relative",
@@ -106,6 +108,20 @@ const useStyles = makeStyles({
     top: 0,
     transition: "width .5s ease-in-out",
   }),
+  creditsSection: {
+    color: "white",
+    "& a": {
+      textDecoration: "underline",
+      cursor: "pointer",
+      color: "white",
+    },
+  },
+  techIssue: {
+    color: "white",
+    "& p": {
+      lineHeight: "1rem",
+    },
+  },
   /* .makeStyles-average-19::before */
   average: (props) => ({
     transition: "all 1s",

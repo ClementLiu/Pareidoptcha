@@ -34,12 +34,12 @@ function ScoreBig(props) {
   const classes = useStyles({
     badgecolor: badgeColor(props.badge),
   });
-  console.log(badgeColor(props.badge));
+  // console.log(badgeColor(props.badge));
   return (
     <div className={classes.scoreBigroot}>
       <div>
         <img src={require("./assets/score-big.svg")} alt="score-big"></img>
-        <div className={classes.levelBadge}>Rookie</div>
+        <div className={classes.levelBadge}>{badgeName(props.badge)}</div>
       </div>
       <div>
         <div className={classes.score}>{padToFour(props.children)}</div>
