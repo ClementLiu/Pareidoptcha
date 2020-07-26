@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import useStyles from "./style";
+import SimpleBtn from "./SimpleBtn";
+
 function SurveyQuestions(props) {
+  const [faceBefore, faceBeforeSet] = useState({
+    isAnswered: false,
+    firstSelected: false,
+    secondirstSelected: false,
+  });
+  const [facePower, facePowerSet] = useState({
+    isAnswered: false,
+    firstSelected: false,
+    secondirstSelected: false,
+  });
   const onClick = () => {
     props.setResult(true);
   };
@@ -12,8 +24,33 @@ function SurveyQuestions(props) {
           Have you ever recognize these “faces” in your life ?
         </div>
         <div className={classes.btnContainer}>
-          <div className={classes.btnStroke}>Yep</div>
-          <div className={classes.btnStroke}>Nope</div>
+          <SimpleBtn
+            isAnswered={faceBefore.isAnswered}
+            isSelected={faceBefore.firstSelected}
+            // onClick={beforeOnClickFirst}
+            onClick={() => {
+              faceBeforeSet({
+                isAnswered: true,
+                firstSelected: true,
+                secondirstSelected: false,
+              });
+            }}
+          >
+            Yep
+          </SimpleBtn>
+          <SimpleBtn
+            isAnswered={faceBefore.isAnswered}
+            isSelected={faceBefore.secondirstSelected}
+            onClick={() => {
+              faceBeforeSet({
+                isAnswered: true,
+                firstSelected: false,
+                secondirstSelected: true,
+              });
+            }}
+          >
+            Nope
+          </SimpleBtn>
         </div>
       </div>
       <div className={classes.question}>
@@ -21,8 +58,33 @@ function SurveyQuestions(props) {
           Do you believe this is a unique power owned by us human?
         </div>
         <div className={classes.btnContainer}>
-          <div className={classes.btnStroke}>Yep</div>
-          <div className={classes.btnStroke}>Nope</div>
+          <SimpleBtn
+            isAnswered={facePower.isAnswered}
+            isSelected={facePower.firstSelected}
+            // onClick={beforeOnClickFirst}
+            onClick={() => {
+              facePowerSet({
+                isAnswered: true,
+                firstSelected: true,
+                secondirstSelected: false,
+              });
+            }}
+          >
+            Yep
+          </SimpleBtn>
+          <SimpleBtn
+            isAnswered={facePower.isAnswered}
+            isSelected={facePower.secondirstSelected}
+            onClick={() => {
+              facePowerSet({
+                isAnswered: true,
+                firstSelected: false,
+                secondirstSelected: true,
+              });
+            }}
+          >
+            Nope
+          </SimpleBtn>
         </div>
       </div>
       <div className={classes.btnContainner}>

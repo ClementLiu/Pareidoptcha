@@ -52,6 +52,10 @@ const useStyles = makeStyles({
     padding: "2px 30px",
     cursor: "pointer",
   },
+  btnStrokeSelected: {
+    backgroundColor: "white",
+    color: "#212121",
+  },
 });
 
 export default useStyles;
