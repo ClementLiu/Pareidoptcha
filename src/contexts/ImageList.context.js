@@ -37,7 +37,7 @@ function pageReducer(state, action) {
             currentPageNum: state.currentPageNum + 1,
             isSubmited: false,
             isCorrect: false,
-            timeTest: Date.now() + 10000,
+            timeTest: Date.now() + 20000,
           }
         : { ...state, isFinished: true };
     case "PREVIOUSPAGE":
@@ -79,7 +79,7 @@ function pageReducer(state, action) {
       }
       break;
     case "STARTTIMER":
-      return { ...state, timeTest: Date.now() + 10000 };
+      return { ...state, timeTest: Date.now() + 20000 };
     case "BACK":
       return { ...state, isSubmited: false };
     case "REST":
@@ -182,7 +182,7 @@ export function QueriesProvider(props) {
     isSubmited: false,
     isCorrect: false,
     levelNum: getLevelNum(),
-    timeTest: Date.now() + 10000,
+    timeTest: Date.now() + 20000,
   });
   const [resultState, resultDispatch] = useReducer(pageReducer, {});
 

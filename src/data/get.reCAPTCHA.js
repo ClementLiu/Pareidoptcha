@@ -238,7 +238,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/lego-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["5", "6", "9", "10"],
     imageParts: [
       {
         alt: "lego",
@@ -344,7 +344,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/daydreamer-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["4", "5", "6", "8", "9", "10"],
     imageParts: [
       {
         alt: "daydreamer",
@@ -450,7 +450,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/boy-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["1", "2", "5", "6", "9", "10"],
     imageParts: [
       {
         alt: "boy",
@@ -556,7 +556,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/make-faces-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["5", "6", "9", "10"],
     imageParts: [
       {
         alt: "make-faces",
@@ -662,7 +662,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/peashooter-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["1", "5", "9", "13"],
     imageParts: [
       {
         alt: "peashooter",
@@ -768,7 +768,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/tongue-out-guy-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["5", "6", "9", "10"],
     imageParts: [
       {
         alt: "tongue-out-guy",
@@ -874,7 +874,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/two-birdies-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["4", "5", "8", "9"],
     imageParts: [
       {
         alt: "two-birdies",
@@ -980,7 +980,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/donald-duck-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["9", "10"],
     imageParts: [
       {
         alt: "donald-duck",
@@ -1086,7 +1086,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/chicken-in-hat-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["1", "2", "3", "5", "6", "7", "9", "10", "11"],
     imageParts: [
       {
         alt: "chicken-in-hat",
@@ -1192,7 +1192,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/dog-head-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["4", "5", "6", "7", "8", "9", "10", "11"],
     imageParts: [
       {
         alt: "dog-head",
@@ -1298,7 +1298,20 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/donald-trump-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: [
+      "0",
+      "1",
+      "2",
+      "4",
+      "5",
+      "6",
+      "8",
+      "9",
+      "10",
+      "12",
+      "13",
+      "14",
+    ],
     imageParts: [
       {
         alt: "donald-trump",
@@ -1404,7 +1417,7 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/sneaking-bear-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: ["4", "5", "6", "7", "8", "9", "10", "11"],
     imageParts: [
       {
         alt: "sneaking-bear",
@@ -1510,7 +1523,21 @@ const imageLists = [
     showFace: false,
     drawSrc: "./assets/squirrel-draw.jpg",
     id: uuid(),
-    checkPoints: ["5", "6", "9", "10", "13", "14"],
+    checkPoints: [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "14",
+    ],
     imageParts: [
       {
         alt: "squirrel",
