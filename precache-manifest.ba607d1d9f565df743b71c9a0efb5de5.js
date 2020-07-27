@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d0a2ed8fc7ecc74fda8d8cbc122dbcd5",
+    "revision": "5b8173f197aceb94dce9193f418b8a87",
     "url": "/index.html"
   },
   {
-    "revision": "332474dc92bbfb202896",
-    "url": "/static/css/main.f2c52572.chunk.css"
+    "revision": "c5ce8996290d107ca94d",
+    "url": "/static/css/main.47cc0f4c.chunk.css"
   },
   {
-    "revision": "d0ce0f2c38023865cff9",
-    "url": "/static/js/2.1504bcc3.chunk.js"
+    "revision": "f46fa3ed9556f2da601d",
+    "url": "/static/js/2.e21d3cf9.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.1504bcc3.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.e21d3cf9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "332474dc92bbfb202896",
-    "url": "/static/js/main.083b58da.chunk.js"
+    "revision": "c5ce8996290d107ca94d",
+    "url": "/static/js/main.df13b20c.chunk.js"
   },
   {
     "revision": "93473d87b751b996e643",
@@ -96,10 +96,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/boy-16.11a05a92.jpg"
   },
   {
-    "revision": "9e3ec2f713c2ec160b448c840e8a0208",
-    "url": "/static/media/boy-draw.9e3ec2f7.jpg"
-  },
-  {
     "revision": "4ab68d243fc09fc97c61ac788ce532e9",
     "url": "/static/media/chicken-in-hat-01.4ab68d24.jpg"
   },
@@ -164,10 +160,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/chicken-in-hat-16.7bfe0be4.jpg"
   },
   {
-    "revision": "fff21f42defe7427d4ad4c5117b003a7",
-    "url": "/static/media/chicken-in-hat-draw.fff21f42.jpg"
-  },
-  {
     "revision": "edaa387edf3d09267714eaf724841b94",
     "url": "/static/media/daydreamer-01.edaa387e.jpg"
   },
@@ -226,10 +218,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a0f3507bf63f8527d5facd1c2d9f8832",
     "url": "/static/media/daydreamer-16.a0f3507b.jpg"
-  },
-  {
-    "revision": "6cae4a6749eb49a7bcdae79933e71f38",
-    "url": "/static/media/daydreamer-draw.6cae4a67.jpg"
   },
   {
     "revision": "1ea4cd4ce64e06781d7f3155e39bf84d",
@@ -296,10 +284,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/dog-head-16.42be4c75.jpg"
   },
   {
-    "revision": "7dbad6b66caf6d0c32e2b3d583c4a588",
-    "url": "/static/media/dog-head-draw.7dbad6b6.jpg"
-  },
-  {
     "revision": "fa04b3ea764430f89d71a9871dbddb41",
     "url": "/static/media/donald-duck-01.fa04b3ea.jpg"
   },
@@ -364,10 +348,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/donald-duck-16.c6f9e3d9.jpg"
   },
   {
-    "revision": "64b14c185b61aac40a14f9165447f7a4",
-    "url": "/static/media/donald-duck-draw.64b14c18.jpg"
-  },
-  {
     "revision": "7b9d517a61ab4912065f3ac65b73c953",
     "url": "/static/media/donald-trump-01.7b9d517a.jpg"
   },
@@ -430,10 +410,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bb80d78d28f817e2dff770c28def9e20",
     "url": "/static/media/donald-trump-16.bb80d78d.jpg"
-  },
-  {
-    "revision": "8c6b476ac06a0194201d6d18baa65f99",
-    "url": "/static/media/donald-trump-draw.8c6b476a.jpg"
   },
   {
     "revision": "55b5f78318a3462270063c365871f12a",
@@ -504,10 +480,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/lego-16.a03e8705.jpg"
   },
   {
-    "revision": "dcb507bc01d8974353d32e7eed22476a",
-    "url": "/static/media/lego-draw.dcb507bc.jpg"
-  },
-  {
     "revision": "0dee1b3b283023a717ebafc022869946",
     "url": "/static/media/make-faces-01.0dee1b3b.jpg"
   },
@@ -572,10 +544,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/make-faces-16.d79256ca.jpg"
   },
   {
-    "revision": "3e499a01541699fb7599d8bbd739d37a",
-    "url": "/static/media/make-faces-draw.3e499a01.jpg"
-  },
-  {
     "revision": "0df4a5f354c897a3d8f3cc37a030b9e1",
     "url": "/static/media/peashooter-01.0df4a5f3.jpg"
   },
@@ -630,10 +598,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "26e2801436999a1be1c07c8a97c0b3c1",
     "url": "/static/media/peashooter-14.26e28014.jpg"
-  },
-  {
-    "revision": "7e6e00db759a4f41bdcfe8c401bbcd12",
-    "url": "/static/media/peashooter-draw.7e6e00db.jpg"
   },
   {
     "revision": "d39e60d4945aed5b9b9c49acf2d5198e",
@@ -716,10 +680,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/sneaking-bear-16.73b41430.jpg"
   },
   {
-    "revision": "2fd4760942f763b6d2d596de622f180f",
-    "url": "/static/media/sneaking-bear-draw.2fd47609.jpg"
-  },
-  {
     "revision": "cdf8046e7121d368b70c10cdad7e8dc6",
     "url": "/static/media/speechless-guy-01.cdf8046e.jpg"
   },
@@ -774,10 +734,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d7fb8c35b98cbf3df74e6ba02fd60989",
     "url": "/static/media/speechless-guy-16.d7fb8c35.jpg"
-  },
-  {
-    "revision": "b3d00ec4f4f5d82c33f24780cab16fa7",
-    "url": "/static/media/speechless-guy-draw.b3d00ec4.jpg"
   },
   {
     "revision": "8f4aa057aa21ac16b85a471fcb72ca50",
@@ -844,10 +800,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/squirrel-16.0371191b.jpg"
   },
   {
-    "revision": "fa732b0c0ca6d155d8fa01806a595715",
-    "url": "/static/media/squirrel-draw.fa732b0c.jpg"
-  },
-  {
     "revision": "69f49ee6cebdb52fc4d4378276e7b8e5",
     "url": "/static/media/surprise-01.69f49ee6.jpg"
   },
@@ -910,10 +862,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3073f68c7fe3e31d6acaafd57d9ecca6",
     "url": "/static/media/surprise-16.3073f68c.jpg"
-  },
-  {
-    "revision": "7f5667021311a9b960de100a18a0556a",
-    "url": "/static/media/surprise-draw.7f566702.jpg"
   },
   {
     "revision": "5794f3de4b9a6f659b91ecc49ad7a4bd",
@@ -984,10 +932,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/tongue-out-guy-16.ae040622.jpg"
   },
   {
-    "revision": "369d0861ae238ffbac05e7b9bbc162bd",
-    "url": "/static/media/tongue-out-guy-draw.369d0861.jpg"
-  },
-  {
     "revision": "bb2b64698d983d55c6f73c2c36cca46e",
     "url": "/static/media/two-birdies-01.bb2b6469.jpg"
   },
@@ -1050,9 +994,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "73c8b3db71c1ea2ba4816de5b5a18612",
     "url": "/static/media/two-birdies-16.73c8b3db.jpg"
-  },
-  {
-    "revision": "6eb74169844875411bc5a59c1bff8b9d",
-    "url": "/static/media/two-birdies-draw.6eb74169.jpg"
   }
 ]);
