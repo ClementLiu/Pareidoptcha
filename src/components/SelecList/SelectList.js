@@ -64,7 +64,7 @@ export default memo(function SelectList() {
             {imageList.showFace && (
               <img
                 className={classes.draw}
-                src={require(`${imageList.drawSrc}`)}
+                src={imageList.drawSrcLink}
                 alt="surprise-Draw"
               ></img>
             )}

@@ -24,6 +24,7 @@ const imageLists = [
     level: "Rookie" /* 困难等级 */,
     showFace: false,
     drawSrc: "./assets/surprise-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxxp0s.jpg",
     id: uuid(),
     checkPoints: ["5", "6", "9", "10"] /* 正确答案的九宫格位置 */,
     imageParts: [
@@ -131,6 +132,7 @@ const imageLists = [
     level: "Rookie",
     showFace: false,
     drawSrc: "./assets/speechless-guy-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/UxvxXQ.jpg",
     id: uuid(),
     checkPoints: ["5", "6", "9", "10", "13", "14"],
     imageParts: [
@@ -237,6 +239,7 @@ const imageLists = [
     level: "Rookie",
     showFace: false,
     drawSrc: "./assets/lego-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/UxvXp8.jpg",
     id: uuid(),
     checkPoints: ["5", "6", "9", "10"],
     imageParts: [
@@ -343,6 +346,7 @@ const imageLists = [
     level: "Rookie",
     showFace: false,
     drawSrc: "./assets/daydreamer-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/UxvT0A.jpg",
     id: uuid(),
     checkPoints: ["4", "5", "6", "8", "9", "10"],
     imageParts: [
@@ -449,6 +453,7 @@ const imageLists = [
     level: "Rookie",
     showFace: false,
     drawSrc: "./assets/boy-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxvomd.jpg",
     id: uuid(),
     checkPoints: ["1", "2", "5", "6", "9", "10"],
     imageParts: [
@@ -555,6 +560,7 @@ const imageLists = [
     level: "Senior",
     showFace: false,
     drawSrc: "./assets/make-faces-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxvj1S.jpg",
     id: uuid(),
     checkPoints: ["5", "6", "9", "10"],
     imageParts: [
@@ -661,6 +667,7 @@ const imageLists = [
     level: "Senior",
     showFace: false,
     drawSrc: "./assets/peashooter-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/UxvLff.jpg",
     id: uuid(),
     checkPoints: ["1", "5", "9", "13"],
     imageParts: [
@@ -767,6 +774,7 @@ const imageLists = [
     level: "Senior",
     showFace: false,
     drawSrc: "./assets/tongue-out-guy-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/UxxPkq.jpg",
     id: uuid(),
     checkPoints: ["5", "6", "9", "10"],
     imageParts: [
@@ -873,6 +881,7 @@ const imageLists = [
     level: "Senior",
     showFace: false,
     drawSrc: "./assets/two-birdies-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxx97n.jpg",
     id: uuid(),
     checkPoints: ["4", "5", "8", "9"],
     imageParts: [
@@ -979,6 +988,7 @@ const imageLists = [
     level: "Senior",
     showFace: false,
     drawSrc: "./assets/donald-duck-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxv5OH.jpg",
     id: uuid(),
     checkPoints: ["9", "10"],
     imageParts: [
@@ -1085,6 +1095,7 @@ const imageLists = [
     level: "Master",
     showFace: false,
     drawSrc: "./assets/chicken-in-hat-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxv7TI.jpg",
     id: uuid(),
     checkPoints: ["1", "2", "3", "5", "6", "7", "9", "10", "11"],
     imageParts: [
@@ -1191,6 +1202,7 @@ const imageLists = [
     level: "Master",
     showFace: false,
     drawSrc: "./assets/dog-head-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxvbkt.jpg",
     id: uuid(),
     checkPoints: ["4", "5", "6", "7", "8", "9", "10", "11"],
     imageParts: [
@@ -1297,6 +1309,7 @@ const imageLists = [
     level: "Master",
     showFace: false,
     drawSrc: "./assets/donald-trump-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/UxvqtP.jpg",
     id: uuid(),
     checkPoints: [
       "0",
@@ -1416,6 +1429,7 @@ const imageLists = [
     level: "Master",
     showFace: false,
     drawSrc: "./assets/sneaking-bear-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/Uxvv6g.jpg",
     id: uuid(),
     checkPoints: ["4", "5", "6", "7", "8", "9", "10", "11"],
     imageParts: [
@@ -1522,6 +1536,7 @@ const imageLists = [
     level: "Master",
     showFace: false,
     drawSrc: "./assets/squirrel-draw.jpg",
+    drawSrcLink: "https://s1.ax1x.com/2020/07/25/UxxSmj.jpg",
     id: uuid(),
     checkPoints: [
       "0",
