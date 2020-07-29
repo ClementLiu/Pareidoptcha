@@ -9,6 +9,7 @@ import useStyle from "./style";
 
 export default memo(function SelectOption({
   imgsrc,
+  imgsrcLink,
   alt,
   id,
   selected,
@@ -33,7 +34,8 @@ export default memo(function SelectOption({
         }}
       >
         {/* <img src={require("../img/logo512.png")} alt={alt} /> */}
-        <img src={require(`${imgsrc}`)} alt={alt} />
+        {/* <img src={require(`${imgsrc}`)} alt={alt} /> */}
+        <img src={imgsrcLink} alt={alt} />
         {/* <img src={imgsrc} alt={alt} /> */}
         {selected && (
           <FontAwesomeIcon
