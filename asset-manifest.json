@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.47cc0f4c.chunk.css",
-    "main.js": "/static/js/main.be5136d8.chunk.js",
-    "main.js.map": "/static/js/main.be5136d8.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.844bc3ea.js",
-    "runtime-main.js.map": "/static/js/runtime-main.844bc3ea.js.map",
-    "static/js/2.41466502.chunk.js": "/static/js/2.41466502.chunk.js",
-    "static/js/2.41466502.chunk.js.map": "/static/js/2.41466502.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.12bc81efa20da759b9d1fa97983bf5f2.js": "/precache-manifest.12bc81efa20da759b9d1fa97983bf5f2.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.47cc0f4c.chunk.css.map": "/static/css/main.47cc0f4c.chunk.css.map",
-    "static/js/2.41466502.chunk.js.LICENSE.txt": "/static/js/2.41466502.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/static/media/8-Bit-Madness.411fc90b.ttf",
-    "static/media/awardAvatar.svg": "/static/media/awardAvatar.7b7745e4.svg",
-    "static/media/landingpageimg.svg": "/static/media/landingpageimg.55b5f783.svg",
-    "static/media/resultCorrect.svg": "/static/media/resultCorrect.d39e60d4.svg",
-    "static/media/resultWrong.svg": "/static/media/resultWrong.6e941d01.svg",
-    "static/media/score-big.svg": "/static/media/score-big.5ee30899.svg",
-    "static/media/score.svg": "/static/media/score.7903cfd6.svg",
-    "static/media/timerClock.svg": "/static/media/timerClock.5794f3de.svg"
+    "main.css": "/Pareidoptcha/static/css/main.d1547241.chunk.css",
+    "main.js": "/Pareidoptcha/static/js/main.aeadcd18.chunk.js",
+    "main.js.map": "/Pareidoptcha/static/js/main.aeadcd18.chunk.js.map",
+    "runtime-main.js": "/Pareidoptcha/static/js/runtime-main.7e017a2c.js",
+    "runtime-main.js.map": "/Pareidoptcha/static/js/runtime-main.7e017a2c.js.map",
+    "static/js/2.41466502.chunk.js": "/Pareidoptcha/static/js/2.41466502.chunk.js",
+    "static/js/2.41466502.chunk.js.map": "/Pareidoptcha/static/js/2.41466502.chunk.js.map",
+    "index.html": "/Pareidoptcha/index.html",
+    "precache-manifest.78ddbdc4d84df4be7bb923ae2cb4cf5c.js": "/Pareidoptcha/precache-manifest.78ddbdc4d84df4be7bb923ae2cb4cf5c.js",
+    "service-worker.js": "/Pareidoptcha/service-worker.js",
+    "static/css/main.d1547241.chunk.css.map": "/Pareidoptcha/static/css/main.d1547241.chunk.css.map",
+    "static/js/2.41466502.chunk.js.LICENSE.txt": "/Pareidoptcha/static/js/2.41466502.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Pareidoptcha/static/media/8-Bit-Madness.411fc90b.ttf",
+    "static/media/awardAvatar.svg": "/Pareidoptcha/static/media/awardAvatar.7b7745e4.svg",
+    "static/media/landingpageimg.svg": "/Pareidoptcha/static/media/landingpageimg.55b5f783.svg",
+    "static/media/resultCorrect.svg": "/Pareidoptcha/static/media/resultCorrect.d39e60d4.svg",
+    "static/media/resultWrong.svg": "/Pareidoptcha/static/media/resultWrong.6e941d01.svg",
+    "static/media/score-big.svg": "/Pareidoptcha/static/media/score-big.5ee30899.svg",
+    "static/media/score.svg": "/Pareidoptcha/static/media/score.7903cfd6.svg",
+    "static/media/timerClock.svg": "/Pareidoptcha/static/media/timerClock.5794f3de.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.844bc3ea.js",
+    "static/js/runtime-main.7e017a2c.js",
     "static/js/2.41466502.chunk.js",
-    "static/css/main.47cc0f4c.chunk.css",
-    "static/js/main.be5136d8.chunk.js"
+    "static/css/main.d1547241.chunk.css",
+    "static/js/main.aeadcd18.chunk.js"
   ]
 }
